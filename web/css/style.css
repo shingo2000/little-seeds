@@ -495,14 +495,6 @@ h3 {
     border-color: var(--color-text);
 }
 
-.contact__campaign {
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 20px;
-    background-color: var(--color-gray);
-    line-height: 1.8;
-}
-
 /* Footer */
 .footer {
     padding: 40px 0;
