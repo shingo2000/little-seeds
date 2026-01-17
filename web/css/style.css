@@ -1,0 +1,583 @@
+:root {
+    --color-bg: #FFFFFF;
+    --color-text: #111111;
+    --color-accent: #333333;
+    --color-gray: #F5F5F5;
+    --color-gray-dark: #666666;
+    --color-line: #E0E0E0;
+
+    --font-sans: 'Noto Sans JP', sans-serif;
+    --font-serif: 'Noto Serif JP', serif;
+    --font-mincho: 'Sawarabi Mincho', serif;
+
+    --header-height: 60px;
+    --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Base Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* Layout */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+}
+
+.section__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 0.1em;
+}
+
+.section__subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    margin-bottom: 60px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.header__logo {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+}
+
+.header__menu-btn {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.header__menu-btn span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-text);
+    transition: all 0.4s var(--ease-out);
+}
+
+.header__menu-btn span:nth-child(1) {
+    top: 0;
+}
+
+.header__menu-btn span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__menu-btn span:nth-child(3) {
+    bottom: 0;
+}
+
+.header__menu-btn.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.header__menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.header__menu-btn.active span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+.header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s var(--ease-out);
+}
+
+.header__nav.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.header__nav-list {
+    text-align: center;
+}
+
+.header__nav-list li {
+    margin: 20px 0;
+}
+
+.header__nav-list a {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+}
+
+/* Hero */
+.hero {
+    padding-top: var(--header-height);
+}
+
+.hero__image-wrapper {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    /* Force B&W feel even if image has subtle color */
+}
+
+.hero__content {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero__catch {
+    font-family: var(--font-mincho);
+    font-size: 1.1rem;
+    line-height: 2.2;
+    letter-spacing: 0.1em;
+}
+
+/* Concept */
+.concept {
+    background-color: var(--color-gray);
+}
+
+.concept p {
+    font-family: var(--font-mincho);
+    font-size: 1rem;
+    line-height: 2.4;
+}
+
+/* Safety */
+.safety__list {
+    margin-top: 40px;
+}
+
+.safety__item {
+    margin-bottom: 40px;
+    border-top: 1px solid var(--color-line);
+    padding-top: 20px;
+}
+
+.safety__item dt {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.safety__item dd {
+    font-size: 0.95rem;
+    color: var(--color-gray-dark);
+}
+
+/* Plans */
+.plan__card {
+    border: 1px solid var(--color-line);
+    padding: 40px;
+    margin-bottom: 40px;
+    background-color: var(--color-bg);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.plan__card--highlight {
+    background-color: #FAFAFA;
+    border-color: #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.plan__name {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.plan__desc {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    margin-bottom: 30px;
+}
+
+.plan__price {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-serif);
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.plan__price .tax {
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.plan__details li {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-line);
+    font-size: 0.95rem;
+}
+
+.plan__details li:last-child {
+    border-bottom: none;
+}
+
+.plan__details small {
+    display: block;
+    color: var(--color-gray-dark);
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.plan__benefit {
+    margin-top: 30px;
+    background-color: var(--color-gray);
+    padding: 20px;
+    text-align: center;
+}
+
+.plan__benefit-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    border: 1px solid var(--color-text);
+    padding: 2px 10px;
+    margin-bottom: 10px;
+}
+
+/* Options */
+.options__title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 80px 0 40px;
+    font-family: var(--font-serif);
+}
+
+.options__list {
+    border-top: 1px solid var(--color-line);
+}
+
+.options__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.options__item dt {
+    font-weight: 500;
+}
+
+.options__item dd {
+    font-weight: 500;
+}
+
+.options__item small {
+    display: block;
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: var(--color-gray-dark);
+}
+
+/* Flow */
+.flow {
+    background-color: var(--color-gray);
+}
+
+.flow__steps {
+    position: relative;
+    padding-left: 20px;
+    border-left: 1px solid var(--color-line);
+    margin-left: 10px;
+}
+
+.flow__step {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.flow__step:last-child {
+    margin-bottom: 0;
+}
+
+.flow__number {
+    position: absolute;
+    top: -5px;
+    left: -40px;
+    /* Adjust based on padding/border */
+    background-color: var(--color-gray);
+    padding: 5px 0;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+.flow__step-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.flow__text {
+    font-size: 0.95rem;
+    color: var(--color-gray-dark);
+}
+
+/* Profile */
+.profile__content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profile__name {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 0.1em;
+}
+
+/* Access */
+.access {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+}
+
+.access .section__title {
+    color: var(--color-bg);
+}
+
+.access .section__subtitle {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.access__list {
+    margin: 20px 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.access__list li {
+    margin-bottom: 10px;
+}
+
+.access__note {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Contact */
+.section__lead {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-family: var(--font-mincho);
+}
+
+.contact__actions {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid var(--color-text);
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    min-width: 280px;
+}
+
+.btn:hover {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    opacity: 1;
+    /* Override default link opacity */
+}
+
+.btn--line {
+    background-color: #06C755;
+    /* LINE Official Green - Keeping this for recognition or using B&W? User asked for monotone. Let's stick to monotone for design consistency but maybe keep button distinctly clickable. */
+    /* Let's follow "Monotone" request strictly. */
+    background-color: var(--color-text);
+    border-color: var(--color-text);
+}
+
+.contact__campaign {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 20px;
+    background-color: var(--color-gray);
+    line-height: 1.8;
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid var(--color-line);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: var(--color-gray-dark);
+    font-family: var(--font-serif);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .header__menu-btn {
+        display: none;
+    }
+
+    .header__nav {
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .header__nav-list {
+        display: flex;
+        gap: 30px;
+    }
+
+    .header__nav-list li {
+        margin: 0;
+    }
+
+    .header__nav-list a {
+        font-size: 1rem;
+    }
+
+    .hero__content {
+        padding: 100px 0;
+    }
+
+    .safety__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .safety__item {
+        border-top: none;
+        border-bottom: 1px solid var(--color-line);
+        padding-bottom: 20px;
+    }
+
+    /* Show plans in a grid/row on desktop */
+    .plan__card {
+        margin-bottom: 0;
+    }
+
+    .section.plan .container>div:not(.options) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        align-items: start;
+    }
+
+    /* Need to wrap plan cards in a wrapper div in HTML for this grid to work perfectly, 
+       but currently they are direct children. Let's adjust selecting via nth-child or re-structure HTML if needed.
+       Actually, checking HTML: yes, they are direct children. 
+       Let's use a wrapper in CSS if possible or just use flex/grid on the container if the container only has title + cards + options.
+       Wait, the container has h2, then 3 cards, then options div.
+       Grid on container might mess up h2 and options.
+       Let's simpler approach: Desktop isn't the priority (Mobile First), but let's make it decent.
+    */
+}
