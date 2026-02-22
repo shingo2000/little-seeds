@@ -161,12 +161,11 @@ dl {
 .menu-overlay__list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
 }
 
 .menu-overlay__item a {
     display: block;
-    padding: 12px 0;
 }
 
 .menu-overlay__en {
