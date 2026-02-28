@@ -599,10 +599,13 @@ dl {
     letter-spacing: 0.13em;
 }
 
-.plan__note {
-    font-size: 13px;
-    color: var(--color-text-subtle);
-    letter-spacing: 0.13em;
+.plan__link {
+    display: block;
+    font-size: 15px;
+    color: var(--color-text);
+    letter-spacing: 0.08em;
+    text-decoration: underline;
+    text-align: center;
     margin-top: 24px;
 }
 
@@ -829,10 +832,6 @@ dl {
         font-size: 36px;
     }
 
-    .section__image {
-        aspect-ratio: 16 / 9;
-    }
-
     /* Menu: keep overlay but with larger text */
     .menu-overlay {
         padding: 0 80px;
@@ -894,7 +893,7 @@ dl {
     .section__heading,
     .concept__text,
     .safety__list,
-    .plan__note,
+    .plan__link,
     .flow__steps,
     .profile__content,
     .profile__logo,
@@ -922,10 +921,6 @@ dl {
         font-size: 48px;
     }
 
-    .hero__slideshow {
-        aspect-ratio: 16 / 9;
-    }
-
     /* Plan cards: 3 columns */
     .plan__cards {
         display: grid;
@@ -945,11 +940,6 @@ dl {
         max-width: 960px;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    /* Section image larger aspect */
-    .section__image {
-        aspect-ratio: 16 / 9;
     }
 
     /* Flow */
