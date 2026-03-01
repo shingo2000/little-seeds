@@ -985,6 +985,22 @@ dl {
         max-width: 700px;
     }
 
+    .menu-overlay {
+        align-items: center;
+    }
+
+    .menu-overlay__header {
+        left: 0;
+        right: 0;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .menu-overlay__list {
+        width: 100%;
+        max-width: 800px;
+    }
+
     /* Header nav: could show inline nav on desktop */
     .header__inner {
         max-width: 960px;
