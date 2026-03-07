@@ -916,6 +916,20 @@ dl {
     border-color: var(--color-text);
 }
 
+/* バリデーションエラー */
+.contact-form__input.is-invalid,
+.contact-form__textarea.is-invalid {
+    border-color: var(--color-accent);
+}
+
+.contact-form__error {
+    color: var(--color-accent);
+    font-size: var(--font-size-s);
+    font-weight: 300;
+    letter-spacing: 0.13em;
+    line-height: 1.4;
+}
+
 .contact-form__submit {
     width: 100%;
     border: none;
