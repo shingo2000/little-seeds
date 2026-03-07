@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <title>お問い合わせ | little seeds photography</title>
+    <meta name="description" content="little seeds photographyへのご予約・お問い合わせはこちらのフォームからお気軽にどうぞ。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="section contact-page">
+            <div class="section__heading">
+                <h1 class="section__title">Contact</h1>
+                <p class="section__subtitle">お問い合わせ</p>
+            </div>
+
+            <div class="contact-form__note">
+                <p>通常、お問い合わせは2日以内に返信いたします。メールが届かない場合はお手数ですが、LINEへ直接ご連絡ください。</p>
+                <p><a href="https://lin.ee/HhGJII7" class="contact-form__note-link" target="_blank" rel="noopener noreferrer">LINEでのお問い合わせはこちら</a></p>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="544f5db8-1184-4d3e-91dc-075fbeb7c3fb">
+                <input type="hidden" name="subject" value="little seeds photography お問い合わせ">
+                <input type="hidden" name="from_name" value="little seeds photography">
+                <input type="checkbox" name="botcheck" style="display: none;">
+
+                <div class="contact-form__group">
+                    <label for="name" class="contact-form__label">お名前 <span class="contact-form__required">必須</span></label>
+                    <input type="text" id="name" name="name" required class="contact-form__input">
+                </div>
+
+                <div class="contact-form__group">
+                    <label for="email" class="contact-form__label">メールアドレス <span class="contact-form__required">必須</span></label>
+                    <input type="email" id="email" name="email" required class="contact-form__input">
+                </div>
+
+                <div class="contact-form__group">
+                    <label for="due_date" class="contact-form__label">出産予定日</label>
+                    <input type="date" id="due_date" name="due_date" class="contact-form__input">
+                </div>
+
+                <div class="contact-form__group">
+                    <label for="area" class="contact-form__label">お住まいのエリア</label>
+                    <input type="text" id="area" name="area" class="contact-form__input">
+                </div>
+
+                <div class="contact-form__group">
+                    <label for="phone" class="contact-form__label">電話番号</label>
+                    <input type="tel" id="phone" name="phone" class="contact-form__input">
+                </div>
+
+                <div class="contact-form__group">
+                    <label for="message" class="contact-form__label">お問い合わせ内容 <span class="contact-form__required">必須</span></label>
+                    <textarea id="message" name="message" required class="contact-form__textarea"></textarea>
+                </div>
+
+                <button type="submit" class="contact__btn contact-form__submit">送信</button>
+            </form>
+
+            <div class="contact-page__back">
+                <a href="../" class="contact__link">トップページに戻る</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">&copy; little seeds photography</p>
+    </footer>
+
+</body>
+
+</html>

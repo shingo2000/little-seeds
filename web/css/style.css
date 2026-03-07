@@ -827,6 +827,106 @@ dl {
     text-decoration: underline;
 }
 
+/* Contact Form Page */
+
+.contact-page {
+    padding-top: var(--space-5);
+}
+
+.header--logo-only .header__inner {
+    justify-content: flex-start;
+}
+
+.header__logo {
+    font-family: var(--font-en);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--color-text);
+}
+
+.contact-form__note {
+    font-size: var(--font-size-m);
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-4);
+}
+
+.contact-form__note-link {
+    display: inline-block;
+    margin-top: var(--space-2);
+    text-decoration: underline;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.contact-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.contact-form__label {
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.contact-form__required {
+    color: var(--color-accent);
+    font-size: var(--font-size-s);
+    font-weight: 300;
+    letter-spacing: 0.13em;
+}
+
+.contact-form__input {
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    font-family: var(--font-ja);
+    font-size: var(--font-size-m);
+    letter-spacing: 0.08em;
+    appearance: none;
+    border-radius: 0;
+}
+
+.contact-form__textarea {
+    width: 100%;
+    height: 180px;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    font-family: var(--font-ja);
+    font-size: var(--font-size-m);
+    letter-spacing: 0.08em;
+    resize: vertical;
+    appearance: none;
+    border-radius: 0;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+    outline: none;
+    border-color: var(--color-text);
+}
+
+.contact-form__submit {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-ja);
+}
+
+.contact-page__back {
+    text-align: center;
+}
+
 .footer {
     padding: var(--space-4) var(--side-padding);
     text-align: center;
@@ -930,6 +1030,15 @@ dl {
     .area__content {
         margin: 0 auto;
     }
+
+    /* Contact Form */
+    .contact-form,
+    .contact-form__note,
+    .contact-page__back {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* ========================================
@@ -1017,6 +1126,15 @@ dl {
     .menu-overlay__list {
         width: 100%;
         max-width: 800px;
+    }
+
+    /* Contact Form */
+    .contact-form,
+    .contact-form__note,
+    .contact-page__back {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     /* Header nav: could show inline nav on desktop */
