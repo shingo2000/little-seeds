@@ -465,7 +465,10 @@ h3 {
 }
 
 .contact__actions {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
     margin-bottom: 40px;
 }
 
@@ -493,6 +496,122 @@ h3 {
     /* Let's follow "Monotone" request strictly. */
     background-color: var(--color-text);
     border-color: var(--color-text);
+}
+
+/* Contact Form */
+.contact-form__note {
+    max-width: 500px;
+    margin: 0 auto 40px;
+    font-size: 0.9rem;
+    line-height: 2;
+    color: var(--color-gray-dark);
+}
+
+.contact-form__note-line {
+    margin-top: 16px;
+}
+
+.contact-form__note-line a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.contact-form__group {
+    margin-bottom: 24px;
+}
+
+.contact-form__label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.contact-form__required {
+    font-size: 0.75rem;
+    color: #c45c5c;
+    margin-left: 4px;
+}
+
+.contact-form__input,
+.contact-form__textarea,
+.contact-form__select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--color-line);
+    background-color: var(--color-bg);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    transition: border-color 0.3s ease;
+    border-radius: 0;
+    appearance: none;
+}
+
+.contact-form__select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus,
+.contact-form__select:focus {
+    outline: none;
+    border-color: var(--color-text);
+}
+
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+    color: #BBBBBB;
+}
+
+.contact-form__textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form__submit {
+    display: block;
+    width: 100%;
+    padding: 15px 40px;
+    border: 1px solid var(--color-text);
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form__submit:hover {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* Contact Page */
+.contact-page {
+    padding-top: calc(var(--header-height) + 40px);
+}
+
+.contact-page__back {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+.contact-page__back a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 /* Footer */

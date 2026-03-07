@@ -787,9 +787,9 @@ dl {
 
 .contact__text {
     font-size: var(--font-size-m);
-    line-height: 2;
+    line-height: 1.8;
     letter-spacing: 0.08em;
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-2);
 }
 
 .contact__btn {
@@ -815,6 +815,18 @@ dl {
    Footer
    ======================================== */
 
+.contact__link {
+    display: block;
+    margin-top: var(--space-4);
+    font-family: var(--font-ja);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    color: var(--color-text);
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+    text-decoration: underline;
+}
+
 .footer {
     padding: var(--space-4) var(--side-padding);
     text-align: center;
@@ -824,7 +836,13 @@ dl {
     gap: var(--space-3);
 }
 
-.footer__instagram {
+.footer__sns {
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+}
+
+.footer__sns-link {
     display: block;
     width: 40px;
     height: 40px;
