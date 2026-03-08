@@ -43,7 +43,7 @@
     <!-- Header -->
     <header class="header">
         <div class="header__inner">
-            <button class="header__menu-btn" aria-label="メニューを開く">
+            <button id="btn-menu-open" class="header__menu-btn" aria-label="メニューを開く">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 5H30V6H0V5Z" fill="#111"/>
                     <path d="M0 14.5H30V15.5H0V14.5Z" fill="#111"/>
@@ -56,7 +56,7 @@
     <!-- Menu Overlay -->
     <nav class="menu-overlay" aria-hidden="true">
         <div class="menu-overlay__header">
-            <button class="menu-overlay__close-btn" aria-label="メニューを閉じる">
+            <button id="btn-menu-close" class="menu-overlay__close-btn" aria-label="メニューを閉じる">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path transform="translate(4, 4)" d="M21.9199 0.707031L11.667 10.96L21.9199 21.2129L21.2129 21.9199L10.96 11.667L0.707031 21.9199L0 21.2129L10.2529 10.96L0 0.707031L0.707031 0L10.96 10.2529L21.2129 0L21.9199 0.707031Z" fill="#111"/>
                 </svg>
@@ -468,10 +468,10 @@
             </div>
             <div class="contact__content">
                 <p class="contact__text">お申し込みはLINEより承ります。</p>
-                <a href="https://lin.ee/HhGJII7" class="contact__btn" target="_blank" rel="noopener noreferrer">
+                <a id="link-line-apply" href="https://lin.ee/HhGJII7" class="contact__btn" target="_blank" rel="noopener noreferrer">
                     公式LINEで申し込み
                 </a>
-                <a href="contact/" class="contact__link">お問い合わせ</a>
+                <a id="link-contact" href="contact/" class="contact__link">お問い合わせ</a>
             </div>
         </section>
     </main>
@@ -479,10 +479,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer__sns">
-            <a href="https://www.instagram.com/littleseeds_photo/" class="footer__sns-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a id="link-footer-instagram" href="https://www.instagram.com/littleseeds_photo/" class="footer__sns-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <img src="assets/images/icon-instagram.svg" alt="Instagram" width="40" height="40">
             </a>
-            <a href="https://lin.ee/HhGJII7" class="footer__sns-link" target="_blank" rel="noopener noreferrer" aria-label="LINE">
+            <a id="link-footer-line" href="https://lin.ee/HhGJII7" class="footer__sns-link" target="_blank" rel="noopener noreferrer" aria-label="LINE">
                 <img src="assets/images/icon-line.svg" alt="LINE" width="40" height="40">
             </a>
         </div>
