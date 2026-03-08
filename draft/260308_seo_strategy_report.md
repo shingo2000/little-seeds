@@ -121,8 +121,8 @@
 | 構造化データ（JSON-LD）  | 高   | ✅ 対応済み。LocalBusiness, WebSiteを追加   |
 | sitemap.xml      | 高   | ✅ 対応済み。Search Consoleへの登録完了        |
 | robots.txt       | 中   | ✅ 対応済み。Sitemap指定を含めて設置            |
-| canonicalタグ      | 中   | 未設定。URL正規化のために必要                  |
-| OGPのURL          | 中   | http:// → https:// に修正すべき         |
+| canonicalタグ      | 中   | ✅ 対応済み。全ページにcanonicalタグを追加         |
+| OGPのURL          | 中   | ✅ 対応済み。https://に統一、contactページにもOGP追加 |
 | コンテンツ量           | 高   | 3ページのみ。Google評価にはコンテンツ拡充が重要       |
 | Googleビジネスプロフィール | 高   | 未確認。ローカルSEO（MEO）に必須               |
 
@@ -136,8 +136,8 @@
 1. ✅ JSON-LD構造化データの追加（LocalBusiness, WebSite）
 2. ✅ sitemap.xml の作成・Search Console登録
 3. ✅ robots.txt の作成（Sitemap指定含む）
-4. canonical タグの追加
-5. OGP URL の https 化
+4. ✅ canonical タグの追加
+5. ✅ OGP URL の https 化
 
 ### Phase 2: コンテンツSEO（中期）
 
