@@ -33,6 +33,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- 構造化データ: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "little seeds photography",
+        "description": "神奈川県藤沢市を拠点にニューボーンフォトの出張撮影をしています。赤ちゃんの無垢な美しさが引き立つようにナチュラル＆シンプルにコーディネートしています。",
+        "url": "https://little-seeds.ayako-suzuki.net/",
+        "image": "https://little-seeds.ayako-suzuki.net/assets/images/hero_1.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "藤沢市",
+            "addressRegion": "神奈川県",
+            "addressCountry": "JP"
+        },
+        "areaServed": [
+            { "@type": "City", "name": "藤沢市" },
+            { "@type": "City", "name": "横浜市" },
+            { "@type": "City", "name": "茅ヶ崎市" },
+            { "@type": "City", "name": "鎌倉市" },
+            { "@type": "AdministrativeArea", "name": "神奈川県" },
+            { "@type": "AdministrativeArea", "name": "東京都23区" }
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "Ayako Suzuki"
+        },
+        "sameAs": [
+            "https://www.instagram.com/littleseeds_photo/"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "撮影プラン",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "name": "Mini Plan",
+                    "description": "赤ちゃんのソロショットのみを短時間で撮影。おくるみ2ポーズ+パーツフォト、アートレタッチデータ15カット。",
+                    "price": "29700",
+                    "priceCurrency": "JPY",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "price": "29700",
+                        "priceCurrency": "JPY",
+                        "valueAddedTaxIncluded": true
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Basic Plan",
+                    "description": "撮影4ポーズ+パーツフォト、アートレタッチデータ20カット。家族写真・兄弟写真も撮影可能。",
+                    "price": "42570",
+                    "priceCurrency": "JPY",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "price": "42570",
+                        "priceCurrency": "JPY",
+                        "valueAddedTaxIncluded": true
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- 構造化データ: WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "little seeds photography",
+        "url": "https://little-seeds.ayako-suzuki.net/"
+    }
+    </script>
 </head>
 
 <body>
