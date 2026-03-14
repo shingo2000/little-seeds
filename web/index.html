@@ -30,11 +30,75 @@
     <!-- End Google Tag Manager -->
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet"></noscript>
 
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+    /* クリティカルCSS: root変数、リセット、ヘッダー、メニュー、セクション共通、ヒーロー */
+    :root {
+        --color-bg: #ffffff;
+        --color-bg-warm: #ede8e2;
+        --color-text: #111111;
+        --color-text-subtle: #666666;
+        --color-border: #e0e0e0;
+        --color-accent: #c45c5c;
+        --font-en: 'Quicksand', sans-serif;
+        --font-ja: 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro',
+            'Hiragino Sans', 'Noto Sans JP', 'BIZ UDPGothic',
+            'Meiryo', 'Yu Gothic Medium', sans-serif;
+        --font-size-s: 13px;
+        --font-size-m: 15px;
+        --font-size-l: 18px;
+        --font-size-xl: 24px;
+        --font-size-2xl: 32px;
+        --space-0_5: 4px;
+        --space-1: 8px;
+        --space-2: 16px;
+        --space-3: 24px;
+        --space-4: 40px;
+        --space-5: 64px;
+        --radius-card: 16px;
+        --radius-banner: 8px;
+        --header-height: 60px;
+        --side-padding: 20px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-ja);color:var(--color-text);background-color:var(--color-bg);line-height:1.8;letter-spacing:0.08em;font-weight:300;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+    img{max-width:100%;height:auto;display:block}
+    a{text-decoration:none;color:inherit;transition:opacity 0.3s ease}
+    a:hover{opacity:0.7}
+    ul,ol,dl{list-style:none}
+    .header{position:fixed;top:0;left:0;width:100%;height:var(--header-height);background-color:transparent;z-index:100}
+    .header__inner{display:flex;justify-content:flex-end;align-items:center;height:100%;padding:0 var(--side-padding)}
+    .header__menu-btn{display:flex;align-items:center;justify-content:center;width:30px;height:30px;background:none;border:none;cursor:pointer;z-index:101}
+    .menu-overlay{position:fixed;top:0;left:0;width:100%;height:100vh;height:100dvh;background-color:var(--color-bg-warm);z-index:200;display:flex;flex-direction:column;justify-content:center;padding:0 var(--space-4);opacity:0;visibility:hidden;pointer-events:none;transition:opacity 0.4s ease,visibility 0.4s ease}
+    .menu-overlay.is-open{opacity:1;visibility:visible;pointer-events:auto}
+    .menu-overlay__header{position:absolute;top:0;right:0;display:flex;justify-content:flex-end;align-items:center;height:var(--header-height);padding:0 var(--side-padding)}
+    .menu-overlay__close-btn{display:flex;align-items:center;justify-content:center;width:30px;height:30px;background:none;border:none;cursor:pointer}
+    .menu-overlay__list{display:flex;flex-direction:column;gap:20px}
+    .menu-overlay__item a{display:block}
+    .menu-overlay__en{display:block;font-family:var(--font-en);font-size:var(--font-size-xl);font-weight:300;letter-spacing:0.06em;line-height:1.2}
+    .menu-overlay__ja{display:block;font-size:var(--font-size-s);color:var(--color-text-subtle);letter-spacing:0.13em;margin-top:var(--space-0_5)}
+    .section{padding:var(--space-5) var(--side-padding)}
+    .section--warm{background-color:var(--color-bg-warm)}
+    .section__heading{text-align:center;margin-bottom:var(--space-4)}
+    .section__title{font-family:var(--font-en);font-size:var(--font-size-2xl);font-weight:300;letter-spacing:0.06em;line-height:1.1;color:var(--color-text)}
+    .section__subtitle{font-size:var(--font-size-s);color:var(--color-text-subtle);letter-spacing:0.13em;margin-top:var(--space-1);line-height:1.4}
+    .section__image-wrapper{margin-bottom:var(--space-4)}
+    .section__image{width:100%;object-fit:cover;aspect-ratio:4/3}
+    .hero{padding-top:calc(var(--header-height) + var(--space-4));padding-left:var(--side-padding);padding-right:var(--side-padding);padding-bottom:0}
+    .hero__content{margin-bottom:var(--space-4)}
+    .hero__title{font-family:var(--font-en);font-size:var(--font-size-2xl);font-weight:300;letter-spacing:0.06em;line-height:1.1;color:var(--color-text)}
+    .hero__subtitle{font-size:var(--font-size-s);color:var(--color-text-subtle);letter-spacing:0.13em;margin-top:20px;line-height:1.4}
+    .hero__slideshow{position:relative;aspect-ratio:4/3}
+    .hero__slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease-in-out}
+    .hero__slide--active{opacity:1}
+    </style>
+    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 
     <!-- 構造化データ: LocalBusiness -->
     <script type="application/ld+json">
