@@ -1,0 +1,62 @@
+# ============================================================
+# ETag 設定（inode を除外し共有ホスティングで安定動作）
+# ============================================================
+FileETag MTime Size
+
+# ============================================================
+# gzip 圧縮（mod_deflate）
+# ============================================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+</IfModule>
+
+# ============================================================
+# キャッシュヘッダー（mod_expires + mod_headers）
+# ============================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # 画像: 1年
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # CSS/JS: 1ヶ月
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+
+    # HTML: 毎回再検証
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # 画像: immutable で条件付きリクエストも抑制
+    <FilesMatch "\.(webp|png|svg|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # CSS/JS: 1ヶ月
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+
+    # HTML: 毎回再検証（ETag で 304 応答を活用）
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+
+    # robots.txt, sitemap.xml: 毎回再検証
+    <FilesMatch "(robots\.txt|sitemap\.xml)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+</IfModule>
