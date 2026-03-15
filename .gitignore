@@ -1,1 +1,11 @@
 /*.png
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# tools - 認証情報・出力データ
+tools/.env
+tools/credentials/
+tools/data/
