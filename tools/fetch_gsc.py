@@ -32,7 +32,7 @@ def query_search_analytics(service, site_url: str, start_date: str, end_date: st
         "dimensions": dimensions,
         "rowLimit": row_limit,
     }
-    response = service.searchAnalytics().query(siteUrl=site_url, body=body).execute()
+    response = service.searchanalytics().query(siteUrl=site_url, body=body).execute()
 
     rows = []
     for row in response.get("rows", []):
