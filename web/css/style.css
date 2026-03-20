@@ -192,7 +192,7 @@ dl {
     font-size: var(--font-size-xl);
     font-weight: 300;
     letter-spacing: 0.06em;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .menu-overlay__ja {
@@ -201,6 +201,7 @@ dl {
     color: var(--color-text-subtle);
     letter-spacing: 0.13em;
     margin-top: var(--space-0_5);
+    line-height: 1.4;
 }
 
 /* ========================================
@@ -765,7 +766,7 @@ dl {
 }
 
 .area__item dd {
-    flex: 1;
+    flex-shrink: 0;
     font-weight: 400;
     text-align: right;
 }
