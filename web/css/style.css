@@ -778,6 +778,86 @@ dl {
 }
 
 /* ========================================
+   FAQ
+   ======================================== */
+
+.faq__list {
+    width: 100%;
+    interpolate-size: allow-keywords;
+}
+
+.faq__item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.faq__question {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-1);
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq__question::-webkit-details-marker {
+    display: none;
+}
+
+.faq__label {
+    font-family: var(--font-en);
+    font-weight: 400;
+    font-size: var(--font-size-m);
+    color: var(--color-accent);
+    letter-spacing: 0.06em;
+    line-height: 1.8;
+    flex-shrink: 0;
+}
+
+.faq__text {
+    flex: 1;
+    font-size: var(--font-size-m);
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+}
+
+.faq__icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq__item[open] .faq__icon {
+    transform: rotate(180deg);
+}
+
+.faq__item[open] {
+    border-bottom: none;
+}
+
+.faq__answer {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 var(--space-1) 0 36px;
+    font-size: var(--font-size-m);
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    transition: height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.faq__item[open] .faq__answer {
+    height: auto;
+    opacity: 1;
+    padding: var(--space-1) var(--space-1) 17px 36px;
+}
+
+.faq__answer p + p {
+    margin-top: var(--space-2);
+}
+
+/* ========================================
    Contact
    ======================================== */
 
@@ -1045,6 +1125,12 @@ dl {
         margin: 0 auto;
     }
 
+    /* FAQ - centered */
+    .faq__list {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
     /* Contact Form */
     .contact-form,
     .contact-form__note,
@@ -1077,6 +1163,7 @@ dl {
     .profile__content,
     .profile__logo,
     .area__content,
+    .faq__list,
     .contact__content {
         max-width: 800px;
         margin-left: auto;
