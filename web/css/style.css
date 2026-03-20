@@ -797,6 +797,7 @@ dl {
     padding: var(--space-1);
     cursor: pointer;
     list-style: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .faq__question::-webkit-details-marker {
@@ -838,13 +839,12 @@ dl {
 .faq__answer {
     height: 0;
     overflow: hidden;
-    opacity: 0;
     padding: 0 var(--space-1) 0 36px;
     font-size: var(--font-size-m);
     line-height: 1.4;
     letter-spacing: 0.08em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    transition: height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    transition: height 0.3s ease;
 }
 
 .faq__item[open] .faq__answer {
