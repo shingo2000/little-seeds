@@ -838,19 +838,15 @@ dl {
 }
 
 .faq__answer {
-    height: 0;
     overflow: hidden;
     padding: 0 var(--space-1) 0 36px;
     font-size: var(--font-size-m);
     line-height: 1.4;
     letter-spacing: 0.08em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    transition: height 0.3s ease;
 }
 
 .faq__item[open] .faq__answer {
-    height: auto;
-    opacity: 1;
     padding: var(--space-1) var(--space-1) 17px 36px;
 }
 
