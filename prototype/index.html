@@ -3,279 +3,213 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>little seeds photography | ニューボーンフォト</title>
-    <meta name="description" content="little seedsは「ちいさな種たち」の意味です。神奈川・東京エリアを中心に、ご自宅へ出張して新生児の記念撮影を行います。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <title>little seeds photography | 神奈川県藤沢市のニューボーンフォトの出張撮影</title>
+    <meta name="description" content="神奈川県藤沢市を拠点にニューボーンフォトの出張撮影をしています。赤ちゃんの無垢な美しさが引き立つようにナチュラル＆シンプルにコーディネートしています。">
+    <link rel="icon" href="/favicon.ico">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&family=Sawarabi+Mincho&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 
 <body>
-
+    <!-- [共通] ヘッダー -->
     <header class="header">
-        <div class="header__inner">
-            <h1 class="header__logo">little seeds photography</h1>
-            <button class="header__menu-btn" aria-label="メニューを開く">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="header__inner" style="justify-content: flex-end">
+            <button id="btn-menu-open" class="header__menu-btn" aria-label="メニューを開く">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 5H30V6H0V5Z" fill="#111"/>
+                    <path d="M0 14.5H30V15.5H0V14.5Z" fill="#111"/>
+                    <path d="M0 24H30V25H0V24Z" fill="#111"/>
+                </svg>
             </button>
         </div>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li><a href="#concept">Concept</a></li>
-                <li><a href="#safety">Safety</a></li>
-                <li><a href="#plan">Plan</a></li>
-                <li><a href="#flow">Flow</a></li>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#access">Area & Access</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
+    <!-- [共通] メニューオーバーレイ -->
+    <nav class="menu-overlay" aria-hidden="true">
+        <div class="menu-overlay__header">
+            <button id="btn-menu-close" class="menu-overlay__close-btn" aria-label="メニューを閉じる">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path transform="translate(4, 4)" d="M21.9199 0.707031L11.667 10.96L21.9199 21.2129L21.2129 21.9199L10.96 11.667L0.707031 21.9199L0 21.2129L10.2529 10.96L0 0.707031L0.707031 0L10.96 10.2529L21.2129 0L21.9199 0.707031Z" fill="#111"/>
+                </svg>
+            </button>
+        </div>
+        <ul class="menu-overlay__list">
+            <li class="menu-overlay__item">
+                <a href="/">
+                    <span class="menu-overlay__en">Home</span>
+                    <span class="menu-overlay__ja">トップ</span>
+                </a>
+            </li>
+            <li class="menu-overlay__item">
+                <a href="/about/">
+                    <span class="menu-overlay__en">About</span>
+                    <span class="menu-overlay__ja">コンセプト・プロフィール</span>
+                </a>
+            </li>
+            <li class="menu-overlay__item">
+                <a href="/gallery/">
+                    <span class="menu-overlay__en">Gallery</span>
+                    <span class="menu-overlay__ja">フォトギャラリー</span>
+                </a>
+            </li>
+            <li class="menu-overlay__item">
+                <a href="/plan/">
+                    <span class="menu-overlay__en">Plan</span>
+                    <span class="menu-overlay__ja">撮影プラン・料金</span>
+                </a>
+            </li>
+            <li class="menu-overlay__item">
+                <a href="/faq/">
+                    <span class="menu-overlay__en">FAQ</span>
+                    <span class="menu-overlay__ja">よくある質問</span>
+                </a>
+            </li>
+            <li class="menu-overlay__item">
+                <a href="/contact/">
+                    <span class="menu-overlay__en">Contact</span>
+                    <span class="menu-overlay__ja">お問い合わせ</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
     <main>
+        <!-- Hero -->
         <section class="hero">
-            <div class="hero__image-wrapper">
-                <img src="assets/images/hero.png" alt="眠っている赤ちゃんのモノクロ写真" class="hero__image">
-            </div>
             <div class="hero__content">
-                <p class="hero__catch">
-                    little seedsは<br>
-                    「ちいさな種たち」の意味です。<br>
-                    <br>
-                    種たちが芽を出し、<br>
-                    根を張り、<br>
-                    花を咲かせて実をつける。<br>
-                    <br>
-                    ちいさな命の誕生を祝い、<br>
-                    成長を応援したいという<br>
-                    思いを込めて<br>
-                    この名前をつけました。
-                </p>
+                <h1 class="hero__title">little seeds<br>photography</h1>
+                <p class="hero__subtitle">神奈川県藤沢市を拠点に、湘南・鎌倉・茅ヶ崎エリアでニューボーンフォトの出張撮影をしています</p>
+            </div>
+            <div class="hero__slideshow">
+                <div class="hero__slide hero__slide--active placeholder" style="aspect-ratio:4/3">Slide 1</div>
+                <div class="hero__slide placeholder" style="aspect-ratio:4/3">Slide 2</div>
+                <div class="hero__slide placeholder" style="aspect-ratio:4/3">Slide 3</div>
+                <div class="hero__slide placeholder" style="aspect-ratio:4/3">Slide 4</div>
+                <div class="hero__slide placeholder" style="aspect-ratio:4/3">Slide 5</div>
             </div>
         </section>
 
-        <section id="concept" class="section concept">
-            <div class="container">
-                <h2 class="section__title">Concept</h2>
-                <div class="section__content">
-                    <p class="text-center">
-                        何年経っても<br>新生児の頃を思い出せるように。<br><br>
-                        無理のない安全なポージングと<br>赤ちゃんの表情を大切に撮影しています。<br><br>
-                        赤ちゃんの無垢な美しさが引き立つように<br>ナチュラル＆シンプルにコーディネート。<br><br>
-                        初めての記念撮影が<br>ご家族の素敵な思い出になるよう、<br>心を込めて撮影させていただきます。
-                    </p>
-                </div>
+        <!-- Introduction -->
+        <!-- About Preview -->
+        <section class="section">
+            <div class="section__heading">
+                <h2 class="section__title">About</h2>
+                <p class="section__subtitle">コンセプト・プロフィール</p>
             </div>
+            <div class="intro__text">
+                <p>little seedsは<br>「ちいさな種たち」の意味です。</p>
+                <p>種たちが芽を出し、<br>根を張り、<br>花を咲かせて実をつける。</p>
+                <p>ちいさな命の誕生を祝い、<br>成長を応援したいという<br>思いを込めて<br>この名前をつけました。</p>
+            </div>
+            <a href="/about/" class="section__more">View More</a>
         </section>
 
-        <section id="safety" class="section safety">
-            <div class="container">
-                <h2 class="section__title">Safety</h2>
-                <p class="section__subtitle">安心安全への取り組み</p>
-                <div class="section__content">
-                    <dl class="safety__list">
-                        <div class="safety__item">
-                            <dt>専門知識に基づいた撮影</dt>
-                            <dd>専門講座で新生児の安全なポージング、理学療法士による新生児の身体の基礎講座を学んでいます。</dd>
-                        </div>
-                        <div class="safety__item">
-                            <dt>無理のないポージング</dt>
-                            <dd>赤ちゃんの体の負担を第一に考え、関節や骨の特性を考慮してポージングします。合成が必要な頬杖ポーズ、支えなく赤ちゃんが自立したポーズは行っておりません。過度に首や身体を曲げたり、赤ちゃんを高いところに寝かせて撮影しません。
-                            </dd>
-                        </div>
-                        <div class="safety__item">
-                            <dt>衛生管理</dt>
-                            <dd>赤ちゃんの肌に触れる衣装や小物は、すべて撮影のたびに無添加洗剤で洗濯、個別の袋に入れ持参します。素材や肌触りなどにも配慮しています。</dd>
-                        </div>
-                        <div class="safety__item">
-                            <dt>撮影時の温度管理</dt>
-                            <dd>新生児は体温調節機能が未熟なため、撮影時は衣装に合わせた室温管理を行います。赤ちゃんが心地よく過ごせる環境を整えます。</dd>
-                        </div>
-                        <div class="safety__item">
-                            <dt>1日1組限定</dt>
-                            <dd>1日1組、1ヶ月5組までの予約制。余裕を持ってスケジューリングできるようにしています。産後のお問合せにも可能な限り対応します。</dd>
-                        </div>
-                        <div class="safety__item">
-                            <dt>キャンセル・延期無料</dt>
-                            <dd>赤ちゃんやご家族、またフォトグラファーの体調不良による日程変更は無料で承ります。</dd>
-                        </div>
-                    </dl>
-                </div>
+        <!-- Gallery Preview -->
+        <section class="section section--warm">
+            <div class="section__heading">
+                <h2 class="section__title">Gallery</h2>
+                <p class="section__subtitle">フォトギャラリー</p>
             </div>
+            <div class="gallery-preview__grid">
+                <div class="gallery-preview__item placeholder">Photo 1</div>
+                <div class="gallery-preview__item placeholder">Photo 2</div>
+                <div class="gallery-preview__item placeholder">Photo 3</div>
+                <div class="gallery-preview__item placeholder">Photo 4</div>
+                <div class="gallery-preview__item placeholder">Photo 5</div>
+                <div class="gallery-preview__item placeholder">Photo 6</div>
+            </div>
+            <a href="/gallery/" class="section__more">View More</a>
         </section>
 
-        <section id="plan" class="section plan">
-            <div class="container">
+        <!-- Plan Preview -->
+        <section class="section">
+            <div class="section__heading">
                 <h2 class="section__title">Plan</h2>
-
-                <div class="plan__card">
-                    <h3 class="plan__name">Mini Plan</h3>
-                    <p class="plan__desc">赤ちゃんのソロショットのみご希望の方はこちら</p>
-                    <p class="plan__price">30,000円<span class="tax">（税込33,000円）</span><br>＋出張費</p>
-                    <ul class="plan__details">
-                        <li>赤ちゃんのみの撮影</li>
-                        <li>おくるみ2ポーズ<br><small>（1ポーズリクエスト可。家族写真、きょうだい写真リクエストできません）</small></li>
-                        <li>アートレタッチデータ15カット</li>
-                        <li>所要時間: 1.5〜2時間程度</li>
-                    </ul>
-                    <div class="plan__benefit">
-                        <span class="plan__benefit-label">写真掲載OK特典</span>
-                        <p>パーツフォト（手足のアップ）</p>
-                    </div>
-                </div>
-
-                <div class="plan__card plan__card--highlight">
-                    <h3 class="plan__name">Basic Plan</h3>
-                    <p class="plan__desc">家族写真ご希望でバランスよく撮影したい方はこちら</p>
-                    <p class="plan__price">45,000円<span class="tax">（税込49,500円）</span><br>＋出張費</p>
-                    <ul class="plan__details">
-                        <li>4ポーズ<br><small>（2ポーズリクエスト可。家族写真、きょうだい写真をリクエストできます）</small></li>
-                        <li>アートレタッチデータ20カット</li>
-                        <li>所要時間: 2〜2.5時間程度</li>
-                    </ul>
-                    <div class="plan__benefit">
-                        <span class="plan__benefit-label">写真掲載OK特典</span>
-                        <p>12cm×17cmパネル1点付き</p>
-                    </div>
-                </div>
-
-                <div class="plan__card">
-                    <h3 class="plan__name">Premium Plan</h3>
-                    <p class="plan__desc">アルバムを作りたい方はこちら</p>
-                    <p class="plan__price">75,000円<span class="tax">（税込82,500円）</span><br>＋出張費</p>
-                    <ul class="plan__details">
-                        <li>4ポーズ + パーツフォト<br><small>（2ポーズリクエスト可）</small></li>
-                        <li>アートレタッチデータ25カット</li>
-                        <li>26cm正方形アルバム付属</li>
-                        <li>全データ納品<small>（50枚程度、色調補正のみ）</small></li>
-                        <li>所要時間: 2.5時間程度</li>
-                    </ul>
-                    <div class="plan__benefit">
-                        <span class="plan__benefit-label">写真掲載OK特典</span>
-                        <p>12cm×17cmパネル1点付き</p>
-                    </div>
-                </div>
-
-                <div class="options">
-                    <h3 class="options__title">Option</h3>
-                    <dl class="options__list">
-                        <div class="options__item">
-                            <dt>土日祝日料金</dt>
-                            <dd>+税込5,500円</dd>
-                        </div>
-                        <div class="options__item">
-                            <dt>スピード納品<br><small>（撮影より１週間後に納品）</small></dt>
-                            <dd>+税込8,800円</dd>
-                        </div>
-                        <div class="options__item">
-                            <dt>全データ納品<br><small>（50枚程度、色調補正のみ）</small></dt>
-                            <dd>+税込16,500円</dd>
-                        </div>
-                        <div class="options__item">
-                            <dt>ご家族・ご兄弟との撮影</dt>
-                            <dd>ベーシック、プレミアムプランのポーズ数の範囲内であれば追加料金なしでOK</dd>
-                        </div>
-                        <div class="options__item">
-                            <dt>双子追加料金</dt>
-                            <dd>なし</dd>
-                        </div>
-                    </dl>
-                </div>
+                <p class="section__subtitle">撮影プラン・料金</p>
             </div>
-        </section>
-
-        <section id="flow" class="section flow">
-            <div class="container">
-                <h2 class="section__title">Flow</h2>
-                <p class="section__subtitle">撮影から納品までの流れ</p>
-                <div class="flow__steps">
-                    <div class="flow__step">
-                        <span class="flow__number">01</span>
-                        <h3 class="flow__step-title">仮予約（妊娠６ヶ月〜）</h3>
-                        <p class="flow__text">
-                            プランが決まりましたらホームページの予約フォーム、又は公式LINEよりご予約ください。出産予定日を仮予約にします。出張費のお見積もり、撮影スペースの確認などを事前に行います。</p>
+            <div class="plan-preview__cards">
+                <div class="plan-preview__card">
+                    <h3 class="plan-preview__name">Mini Plan</h3>
+                    <p class="plan-preview__desc">赤ちゃんのソロショットのみを短時間で撮影</p>
+                    <div class="plan-preview__price">
+                        <span class="plan-preview__price-amount">27,000</span><span class="plan-preview__price-unit">円</span>
+                        <span class="plan-preview__price-tax">（税込29,700円）＋出張費</span>
                     </div>
-                    <div class="flow__step">
-                        <span class="flow__number">02</span>
-                        <h3 class="flow__step-title">出産報告</h3>
-                        <p class="flow__text">
-                            ご出産後、なるべく早めにご連絡下さい。赤ちゃんとママの体調を考慮し撮影日を決定します。生後7日〜14日に調整する場合が多いです。撮影当日の細かなご案内をお送りします。</p>
-                    </div>
-                    <div class="flow__step">
-                        <span class="flow__number">03</span>
-                        <h3 class="flow__step-title">撮影当日</h3>
-                        <p class="flow__text">ご自宅へ伺い、赤ちゃんの様子に合わせて撮影します。撮影代金は当日現金にてお支払い、または後日お振込みをお願いします。</p>
-                    </div>
-                    <div class="flow__step">
-                        <span class="flow__number">04</span>
-                        <h3 class="flow__step-title">納品</h3>
-                        <p class="flow__text">お振込確認後撮影から3週間以内に、ダウンロード形式にてデータを納品します。パネル等のプリント商品は写真のセレクト後1ヶ月程度でお届けします。</p>
+                </div>
+                <div class="plan-preview__card">
+                    <h3 class="plan-preview__name">Basic Plan</h3>
+                    <p class="plan-preview__desc">家族写真もバランスよく撮影</p>
+                    <div class="plan-preview__price">
+                        <span class="plan-preview__price-amount">38,700</span><span class="plan-preview__price-unit">円</span>
+                        <span class="plan-preview__price-tax">（税込42,570円）＋出張費</span>
                     </div>
                 </div>
             </div>
+            <a href="/plan/" class="section__more">View More</a>
         </section>
 
-        <section id="profile" class="section profile">
-            <div class="container">
-                <h2 class="section__title">Profile</h2>
-                <div class="profile__content">
-                    <h3 class="profile__name">Ayako Suzuki</h3>
-                    <p class="profile__text">
-                        神奈川県藤沢市を拠点に活動するフォトグラファー。一児の母。<br><br>
-                        元々フリーランスフォトグラファーとして雑誌、書籍、パンフレットやウェディングフォトの撮影を行っていました。育休から復帰する2019年に出張型のニューボーンフォト撮影チームに参加。安全を重視した撮影方法を学び、300組以上の撮影を経験。<br>
-                        さらに知識を深めたいと思い「ニューボーンフォトカレッジ」を1年間受講。そのほか新生児の身体基礎講座や乳幼児の救命講座を受講し、現在も学び続けています。<br><br>
-                        産まれたばかりの赤ちゃんがいるご家庭に出張し、たくさんの感動的な経験をさせていただきました。写真の力で少しでもお子様の成長と子育て中のご家庭を応援できたらと思い日々撮影しています。
-                    </p>
-                </div>
+        <!-- FAQ Preview -->
+        <section class="section section--warm">
+            <div class="section__heading">
+                <h2 class="section__title">FAQ</h2>
+                <p class="section__subtitle">よくある質問</p>
             </div>
-        </section>
-
-        <section id="access" class="section access">
-            <div class="container">
-                <h2 class="section__title">Area & Access</h2>
-                <div class="access__content">
-                    <p>藤沢市より出張します。</p>
-                    <ul class="access__list">
-                        <li>藤沢市内：無料</li>
-                        <li>茅ヶ崎市、鎌倉市：3,000円</li>
-                        <li>神奈川県の他の地域：5,000円</li>
-                        <li>東京都23区：8,000円</li>
-                        <li>千葉県、埼玉県南部、静岡県西部：別途ご相談ください</li>
-                    </ul>
-                    <p class="access__note">（お住まいの場所によりコインパーキングを使用する場合、別途駐車場代が発生します）</p>
-                </div>
+            <div class="faq-preview__list">
+                <p class="faq-preview__item">予約はいつからすれば良い？</p>
+                <p class="faq-preview__item">生後何日まで撮影できる？</p>
+                <p class="faq-preview__item">衣装や小物、背景素材は借りられる？</p>
             </div>
+            <a href="/faq/" class="section__more">View More</a>
         </section>
 
-        <section id="contact" class="section contact">
-            <div class="container">
+        <!-- CTA -->
+        <section id="contact" class="section">
+            <div class="section__heading">
                 <h2 class="section__title">Contact</h2>
-                <p class="section__lead">ご予約やお問い合わせは<br>フォームまたは公式LINEより承ります。</p>
-                <div class="contact__actions">
-                    <a href="contact.html" class="btn">お問い合わせフォーム</a>
-                    <a href="https://line.me/R/ti/p/@561ignlm" class="btn btn--line" target="_blank"
-                        rel="noopener noreferrer">
-                        公式LINEで予約・相談
-                    </a>
-                </div>
+                <p class="section__subtitle">お問い合わせ</p>
+            </div>
+            <div class="contact__content">
+                <p class="contact__text">お申し込みはLINEより承ります。</p>
+                <a href="https://lin.ee/HhGJII7" class="contact__btn" target="_blank" rel="noopener noreferrer">
+                    公式LINEで申し込み
+                </a>
+                <a href="/contact/" class="contact__link">お問い合わせ</a>
             </div>
         </section>
     </main>
 
+    <!-- [共通] フッター -->
     <footer class="footer">
-        <p class="copyright">&copy; little seeds photography</p>
+        <nav class="footer__nav">
+            <ul class="footer__nav-list">
+                <li><a href="/" class="footer__nav-link">Home</a></li>
+                <li><a href="/about/" class="footer__nav-link">About</a></li>
+                <li><a href="/gallery/" class="footer__nav-link">Gallery</a></li>
+                <li><a href="/plan/" class="footer__nav-link">Plan</a></li>
+                <li><a href="/faq/" class="footer__nav-link">FAQ</a></li>
+                <li><a href="/contact/" class="footer__nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer__sns">
+            <a href="https://www.instagram.com/littleseeds_photo/" class="footer__sns-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <div class="placeholder" style="width:40px;height:40px;font-size:10px">IG</div>
+            </a>
+            <a href="https://lin.ee/HhGJII7" class="footer__sns-link" target="_blank" rel="noopener noreferrer" aria-label="LINE">
+                <div class="placeholder" style="width:40px;height:40px;font-size:10px">LINE</div>
+            </a>
+        </div>
+        <p class="footer__copyright">&copy; little seeds photography</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/home.js"></script>
 </body>
 
 </html>

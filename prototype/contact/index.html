@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <title>お問い合わせ | little seeds photography</title>
+    <meta name="description" content="little seeds photographyへのご予約・お問い合わせはこちらのフォームからお気軽にどうぞ。">
+    <link rel="icon" href="/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/common.css">
+    <style>
+    .contact-page { padding-top: calc(var(--header-height) + var(--space-5)); }
+    .contact-form__note { font-size: var(--font-size-m); line-height: 1.8; letter-spacing: 0.08em; margin-bottom: var(--space-4); }
+    .contact-form__note-link { display: inline-block; margin-top: var(--space-2); text-decoration: underline; }
+    .contact-form { display: flex; flex-direction: column; gap: var(--space-3); }
+    .contact-form__group { display: flex; flex-direction: column; gap: var(--space-1); }
+    .contact-form__label { font-size: var(--font-size-m); font-weight: 600; letter-spacing: 0.08em; }
+    .contact-form__required { color: var(--color-accent); font-size: var(--font-size-s); font-weight: 300; letter-spacing: 0.13em; }
+    .contact-form__input { width: 100%; height: 48px; padding: 0 12px; border: 1px solid var(--color-border); background-color: var(--color-bg); font-family: var(--font-ja); font-size: var(--font-size-m); letter-spacing: 0.08em; appearance: none; border-radius: 0; }
+    .contact-form__textarea { width: 100%; height: 180px; padding: 12px; border: 1px solid var(--color-border); background-color: var(--color-bg); font-family: var(--font-ja); font-size: var(--font-size-m); letter-spacing: 0.08em; resize: vertical; appearance: none; border-radius: 0; }
+    .contact-form__input:focus, .contact-form__textarea:focus { outline: none; border-color: var(--color-text); }
+    .contact-form__input.is-invalid, .contact-form__textarea.is-invalid { border-color: var(--color-accent); }
+    .contact-form__error { color: var(--color-accent); font-size: var(--font-size-s); font-weight: 300; letter-spacing: 0.13em; line-height: 1.4; }
+    .contact-form__submit { width: 100%; border: none; cursor: pointer; font-family: var(--font-ja); }
+    .contact-page__back { text-align: center; }
+    @media (min-width: 768px) { .contact-form, .contact-form__note, .contact-page__back { max-width: 500px; margin-left: auto; margin-right: auto; } }
+    </style>
+</head>
+
+<body>
+    <!-- [共通] ヘッダー -->
+    <header class="header">
+        <div class="header__inner">
+            <a href="/" class="header__logo">little seeds<br>photography</a>
+            <button id="btn-menu-open" class="header__menu-btn" aria-label="メニューを開く">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 5H30V6H0V5Z" fill="#111"/>
+                    <path d="M0 14.5H30V15.5H0V14.5Z" fill="#111"/>
+                    <path d="M0 24H30V25H0V24Z" fill="#111"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- [共通] メニューオーバーレイ -->
+    <nav class="menu-overlay" aria-hidden="true">
+        <div class="menu-overlay__header">
+            <button id="btn-menu-close" class="menu-overlay__close-btn" aria-label="メニューを閉じる">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path transform="translate(4, 4)" d="M21.9199 0.707031L11.667 10.96L21.9199 21.2129L21.2129 21.9199L10.96 11.667L0.707031 21.9199L0 21.2129L10.2529 10.96L0 0.707031L0.707031 0L10.96 10.2529L21.2129 0L21.9199 0.707031Z" fill="#111"/>
+                </svg>
+            </button>
+        </div>
+        <ul class="menu-overlay__list">
+            <li class="menu-overlay__item"><a href="/"><span class="menu-overlay__en">Home</span><span class="menu-overlay__ja">トップ</span></a></li>
+            <li class="menu-overlay__item"><a href="/about/"><span class="menu-overlay__en">About</span><span class="menu-overlay__ja">コンセプト・プロフィール</span></a></li>
+            <li class="menu-overlay__item"><a href="/gallery/"><span class="menu-overlay__en">Gallery</span><span class="menu-overlay__ja">フォトギャラリー</span></a></li>
+            <li class="menu-overlay__item"><a href="/plan/"><span class="menu-overlay__en">Plan</span><span class="menu-overlay__ja">撮影プラン・料金</span></a></li>
+            <li class="menu-overlay__item"><a href="/faq/"><span class="menu-overlay__en">FAQ</span><span class="menu-overlay__ja">よくある質問</span></a></li>
+            <li class="menu-overlay__item"><a href="/contact/"><span class="menu-overlay__en">Contact</span><span class="menu-overlay__ja">お問い合わせ</span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section contact-page">
+            <div class="section__heading">
+                <h1 class="section__title">Contact</h1>
+                <p class="section__subtitle">お問い合わせ</p>
+            </div>
+
+            <div class="contact-form__note">
+                <p>通常、お問い合わせは2日以内に返信いたします。メールが届かない場合はお手数ですが、LINEへ直接ご連絡ください。</p>
+                <p><a href="https://lin.ee/HhGJII7" class="contact-form__note-link" target="_blank" rel="noopener noreferrer">LINEでのお問い合わせはこちら</a></p>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" novalidate>
+                <input type="hidden" name="access_key" value="544f5db8-1184-4d3e-91dc-075fbeb7c3fb">
+                <input type="hidden" name="subject" value="little seeds photography お問い合わせ">
+                <input type="hidden" name="from_name" value="little seeds photography">
+                <input type="hidden" name="redirect" value="https://little-seeds.ayako-suzuki.net/contact/thanks.html">
+                <input type="checkbox" name="botcheck" style="display: none;">
+
+                <div class="contact-form__group">
+                    <label for="name" class="contact-form__label">お名前 <span class="contact-form__required">必須</span></label>
+                    <input type="text" id="name" name="お名前" required class="contact-form__input">
+                    <p class="contact-form__error" id="name-error" hidden></p>
+                </div>
+
+                <div class="contact-form__group">
+                    <label for="email" class="contact-form__label">メールアドレス <span class="contact-form__required">必須</span></label>
+                    <input type="email" id="email" name="メールアドレス" required class="contact-form__input">
+                    <p class="contact-form__error" id="email-error" hidden></p>
+                </div>
+
+                <div class="contact-form__group">
+                    <label for="due_date" class="contact-form__label">出産予定日</label>
+                    <input type="date" id="due_date" name="出産予定日" class="contact-form__input">
+                </div>
+
+                <div class="contact-form__group">
+                    <label for="area" class="contact-form__label">お住まいのエリア</label>
+                    <input type="text" id="area" name="お住まいのエリア" class="contact-form__input">
+                </div>
+
+                <div class="contact-form__group">
+                    <label for="phone" class="contact-form__label">電話番号</label>
+                    <input type="tel" id="phone" name="電話番号" class="contact-form__input">
+                </div>
+
+                <div class="contact-form__group">
+                    <label for="message" class="contact-form__label">お問い合わせ内容 <span class="contact-form__required">必須</span></label>
+                    <textarea id="message" name="お問い合わせ内容" required class="contact-form__textarea"></textarea>
+                    <p class="contact-form__error" id="message-error" hidden></p>
+                </div>
+
+                <button type="submit" class="contact__btn contact-form__submit">送信</button>
+            </form>
+
+            <div class="contact-page__back">
+                <a href="/" class="contact__link">トップページに戻る</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer__nav">
+            <ul class="footer__nav-list">
+                <li><a href="/" class="footer__nav-link">Home</a></li>
+                <li><a href="/about/" class="footer__nav-link">About</a></li>
+                <li><a href="/gallery/" class="footer__nav-link">Gallery</a></li>
+                <li><a href="/plan/" class="footer__nav-link">Plan</a></li>
+                <li><a href="/faq/" class="footer__nav-link">FAQ</a></li>
+                <li><a href="/contact/" class="footer__nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="footer__copyright">&copy; little seeds photography</p>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+    (function () {
+        const form = document.querySelector('.contact-form');
+        const fields = [
+            { id: 'name', message: 'お名前を入力してください。' },
+            { id: 'email', message: 'メールアドレスを入力してください。', formatMessage: '正しいメールアドレスを入力してください。' },
+            { id: 'message', message: 'お問い合わせ内容を入力してください。' },
+        ];
+        function showError(field, message) { const input = document.getElementById(field.id); const error = document.getElementById(field.id + '-error'); input.classList.add('is-invalid'); error.textContent = message; error.hidden = false; }
+        function clearError(field) { const input = document.getElementById(field.id); const error = document.getElementById(field.id + '-error'); input.classList.remove('is-invalid'); error.textContent = ''; error.hidden = true; }
+        function validateField(field) { const input = document.getElementById(field.id); const value = input.value.trim(); if (!value) { showError(field, field.message); return false; } if (field.id === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) { showError(field, field.formatMessage); return false; } clearError(field); return true; }
+        form.addEventListener('submit', function (e) { let isValid = true; fields.forEach(function (field) { if (!validateField(field)) { isValid = false; } }); if (!isValid) { e.preventDefault(); var firstInvalid = document.querySelector('.is-invalid'); if (firstInvalid) { firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' }); } } });
+        fields.forEach(function (field) { const input = document.getElementById(field.id); input.addEventListener('input', function () { validateField(field); }); });
+    })();
+    </script>
+</body>
+
+</html>

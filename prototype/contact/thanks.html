@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <title>お問い合わせありがとうございます | little seeds photography</title>
+    <link rel="icon" href="/favicon.ico">
+    <meta name="robots" content="noindex">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/common.css">
+    <style>
+    .contact-page { padding-top: calc(var(--header-height) + var(--space-5)); }
+    .thanks-message { text-align: center; margin-bottom: var(--space-4); font-size: var(--font-size-m); line-height: 2; letter-spacing: 0.08em; }
+    .contact-page__back { text-align: center; }
+    </style>
+</head>
+
+<body>
+    <!-- [共通] ヘッダー -->
+    <header class="header">
+        <div class="header__inner">
+            <a href="/" class="header__logo">little seeds<br>photography</a>
+            <button id="btn-menu-open" class="header__menu-btn" aria-label="メニューを開く">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 5H30V6H0V5Z" fill="#111"/>
+                    <path d="M0 14.5H30V15.5H0V14.5Z" fill="#111"/>
+                    <path d="M0 24H30V25H0V24Z" fill="#111"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- [共通] メニューオーバーレイ -->
+    <nav class="menu-overlay" aria-hidden="true">
+        <div class="menu-overlay__header">
+            <button id="btn-menu-close" class="menu-overlay__close-btn" aria-label="メニューを閉じる">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path transform="translate(4, 4)" d="M21.9199 0.707031L11.667 10.96L21.9199 21.2129L21.2129 21.9199L10.96 11.667L0.707031 21.9199L0 21.2129L10.2529 10.96L0 0.707031L0.707031 0L10.96 10.2529L21.2129 0L21.9199 0.707031Z" fill="#111"/>
+                </svg>
+            </button>
+        </div>
+        <ul class="menu-overlay__list">
+            <li class="menu-overlay__item"><a href="/"><span class="menu-overlay__en">Home</span><span class="menu-overlay__ja">トップ</span></a></li>
+            <li class="menu-overlay__item"><a href="/about/"><span class="menu-overlay__en">About</span><span class="menu-overlay__ja">コンセプト・プロフィール</span></a></li>
+            <li class="menu-overlay__item"><a href="/gallery/"><span class="menu-overlay__en">Gallery</span><span class="menu-overlay__ja">フォトギャラリー</span></a></li>
+            <li class="menu-overlay__item"><a href="/plan/"><span class="menu-overlay__en">Plan</span><span class="menu-overlay__ja">撮影プラン・料金</span></a></li>
+            <li class="menu-overlay__item"><a href="/faq/"><span class="menu-overlay__en">FAQ</span><span class="menu-overlay__ja">よくある質問</span></a></li>
+            <li class="menu-overlay__item"><a href="/contact/"><span class="menu-overlay__en">Contact</span><span class="menu-overlay__ja">お問い合わせ</span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section contact-page">
+            <div class="section__heading">
+                <h1 class="section__title">Thank You</h1>
+                <p class="section__subtitle">お問い合わせありがとうございます</p>
+            </div>
+
+            <div class="thanks-message">
+                <p>お問い合わせいただきありがとうございます。</p>
+                <p>内容を確認のうえ、2日以内にご返信いたします。</p>
+            </div>
+
+            <div class="contact-page__back">
+                <a href="/" class="contact__link">トップページに戻る</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer__nav">
+            <ul class="footer__nav-list">
+                <li><a href="/" class="footer__nav-link">Home</a></li>
+                <li><a href="/about/" class="footer__nav-link">About</a></li>
+                <li><a href="/gallery/" class="footer__nav-link">Gallery</a></li>
+                <li><a href="/plan/" class="footer__nav-link">Plan</a></li>
+                <li><a href="/faq/" class="footer__nav-link">FAQ</a></li>
+                <li><a href="/contact/" class="footer__nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="footer__copyright">&copy; little seeds photography</p>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
