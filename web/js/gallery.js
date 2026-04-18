@@ -2,29 +2,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightbox = document.getElementById('lightbox');
     if (!lightbox) return;
 
-    const imageWrapper = lightbox.querySelector('.lightbox__image-wrapper');
+    const scroller = lightbox.querySelector('.lightbox__scroller');
     const counterCurrent = lightbox.querySelector('.lightbox__current');
     const counterTotal = lightbox.querySelector('.lightbox__total');
     const closeBtn = lightbox.querySelector('.lightbox__close');
     const items = document.querySelectorAll('.gallery__item');
-    if (counterTotal) counterTotal.textContent = items.length;
-    let currentIndex = 0;
 
-    function updateImage() {
-        const item = items[currentIndex];
+    if (!scroller || items.length === 0) return;
+
+    if (counterTotal) counterTotal.textContent = items.length;
+
+    // Pre-populate slides once so scroll-snap has targets
+    items.forEach((item) => {
         const img = item.querySelector('img');
-        if (img) {
-            imageWrapper.innerHTML = `<img src="${img.src}" alt="${img.alt || ''}">`;
-        }
-        if (counterCurrent) counterCurrent.textContent = currentIndex + 1;
+        const slide = document.createElement('div');
+        slide.className = 'lightbox__slide';
+        const slideImg = document.createElement('img');
+        slideImg.src = img.src;
+        slideImg.alt = img.alt || '';
+        slideImg.loading = 'lazy';
+        slide.appendChild(slideImg);
+        scroller.appendChild(slide);
+    });
+
+    function currentIndex() {
+        const width = scroller.clientWidth || 1;
+        return Math.round(scroller.scrollLeft / width);
+    }
+
+    function updateCounter() {
+        if (counterCurrent) counterCurrent.textContent = currentIndex() + 1;
     }
 
     function openLightbox(index) {
-        currentIndex = index;
-        updateImage();
         lightbox.classList.add('is-open');
         lightbox.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+        // Wait for transition/layout then jump scroll position
+        requestAnimationFrame(() => {
+            scroller.style.scrollBehavior = 'auto';
+            scroller.scrollLeft = index * scroller.clientWidth;
+            requestAnimationFrame(() => {
+                scroller.style.scrollBehavior = '';
+                updateCounter();
+            });
+        });
     }
 
     function closeLightbox() {
@@ -33,14 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
-    function showPrev() {
-        currentIndex = (currentIndex - 1 + items.length) % items.length;
-        updateImage();
-    }
-
-    function showNext() {
-        currentIndex = (currentIndex + 1) % items.length;
-        updateImage();
+    function scrollBy(delta) {
+        const width = scroller.clientWidth;
+        const next = Math.max(0, Math.min((items.length - 1) * width, scroller.scrollLeft + delta * width));
+        scroller.scrollTo({ left: next, behavior: 'smooth' });
     }
 
     items.forEach((item, index) => {
@@ -52,39 +70,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
 
-    // Tap on overlay area (outside image) to close
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox || e.target === imageWrapper) {
-            closeLightbox();
-        }
+    // Update counter as user scrolls
+    let scrollTimer = null;
+    scroller.addEventListener('scroll', () => {
+        if (scrollTimer) cancelAnimationFrame(scrollTimer);
+        scrollTimer = requestAnimationFrame(updateCounter);
     });
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('is-open')) return;
         if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') showPrev();
-        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') scrollBy(-1);
+        if (e.key === 'ArrowRight') scrollBy(1);
     });
 
-    // Swipe gesture (touch)
-    let touchStartX = 0;
-    let touchStartY = 0;
-    const SWIPE_THRESHOLD = 50;
+    // Mouse drag (desktop)
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartScroll = 0;
 
-    lightbox.addEventListener('touchstart', (e) => {
-        if (!lightbox.classList.contains('is-open')) return;
-        touchStartX = e.changedTouches[0].clientX;
-        touchStartY = e.changedTouches[0].clientY;
-    }, { passive: true });
+    scroller.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        dragStartX = e.clientX;
+        dragStartScroll = scroller.scrollLeft;
+        scroller.classList.add('is-dragging');
+    });
 
-    lightbox.addEventListener('touchend', (e) => {
-        if (!lightbox.classList.contains('is-open')) return;
-        const dx = e.changedTouches[0].clientX - touchStartX;
-        const dy = e.changedTouches[0].clientY - touchStartY;
-        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > SWIPE_THRESHOLD) {
-            if (dx > 0) showPrev();
-            else showNext();
-        }
-    }, { passive: true });
+    window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        scroller.scrollLeft = dragStartScroll - (e.clientX - dragStartX);
+    });
+
+    window.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        scroller.classList.remove('is-dragging');
+        // Snap to nearest slide
+        const width = scroller.clientWidth;
+        const idx = Math.round(scroller.scrollLeft / width);
+        scroller.scrollTo({ left: idx * width, behavior: 'smooth' });
+    });
 });
