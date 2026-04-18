@@ -1,12 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
     const lightbox = document.getElementById('lightbox');
-    const lightboxImage = lightbox.querySelector('.lightbox__image-wrapper');
+    if (!lightbox) return;
+
+    const imageWrapper = lightbox.querySelector('.lightbox__image-wrapper');
+    const counterCurrent = lightbox.querySelector('.lightbox__current');
+    const counterTotal = lightbox.querySelector('.lightbox__total');
+    const closeBtn = lightbox.querySelector('.lightbox__close');
     const items = document.querySelectorAll('.gallery__item');
+    if (counterTotal) counterTotal.textContent = items.length;
     let currentIndex = 0;
+
+    function updateImage() {
+        const item = items[currentIndex];
+        const img = item.querySelector('img');
+        if (img) {
+            imageWrapper.innerHTML = `<img src="${img.src}" alt="${img.alt || ''}">`;
+        }
+        if (counterCurrent) counterCurrent.textContent = currentIndex + 1;
+    }
 
     function openLightbox(index) {
         currentIndex = index;
-        updateLightboxImage();
+        updateImage();
         lightbox.classList.add('is-open');
         lightbox.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -18,26 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
-    function updateLightboxImage() {
-        const item = items[currentIndex];
-        const thumb = item.querySelector('.gallery__thumb');
-        const img = thumb.querySelector('img');
-        if (img) {
-            lightboxImage.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
-        } else {
-            const placeholder = thumb.querySelector('.placeholder');
-            lightboxImage.innerHTML = `<div class="placeholder" style="width:80vw;height:60vh;max-width:800px">${placeholder.textContent}</div>`;
-        }
-    }
-
     function showPrev() {
         currentIndex = (currentIndex - 1 + items.length) % items.length;
-        updateLightboxImage();
+        updateImage();
     }
 
     function showNext() {
         currentIndex = (currentIndex + 1) % items.length;
-        updateLightboxImage();
+        updateImage();
     }
 
     items.forEach((item, index) => {
@@ -47,15 +50,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    lightbox.querySelector('.lightbox__close').addEventListener('click', closeLightbox);
-    lightbox.querySelector('.lightbox__overlay').addEventListener('click', closeLightbox);
-    lightbox.querySelector('.lightbox__prev').addEventListener('click', showPrev);
-    lightbox.querySelector('.lightbox__next').addEventListener('click', showNext);
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
 
+    // Tap on overlay area (outside image) to close
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === imageWrapper) {
+            closeLightbox();
+        }
+    });
+
+    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('is-open')) return;
         if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowLeft') showPrev();
         if (e.key === 'ArrowRight') showNext();
     });
+
+    // Swipe gesture (touch)
+    let touchStartX = 0;
+    let touchStartY = 0;
+    const SWIPE_THRESHOLD = 50;
+
+    lightbox.addEventListener('touchstart', (e) => {
+        if (!lightbox.classList.contains('is-open')) return;
+        touchStartX = e.changedTouches[0].clientX;
+        touchStartY = e.changedTouches[0].clientY;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e) => {
+        if (!lightbox.classList.contains('is-open')) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > SWIPE_THRESHOLD) {
+            if (dx > 0) showPrev();
+            else showNext();
+        }
+    }, { passive: true });
 });

@@ -12,25 +12,40 @@
     background-color: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-card);
-    padding: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
 }
 
 .voice__image {
-    margin-bottom: var(--space-2);
+    width: 64px;
+    height: 64px;
     overflow: hidden;
-    border-radius: var(--radius-banner);
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
-.voice__image .placeholder,
 .voice__image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
+}
+
+.voice__body {
+    width: 100%;
 }
 
 .voice__text {
     font-size: var(--font-size-m);
-    line-height: 1.9;
+    line-height: 1.8;
     letter-spacing: 0.08em;
+}
+
+.voice__text + .voice__text {
+    margin-top: var(--space-2);
 }
 
 /* ========================================

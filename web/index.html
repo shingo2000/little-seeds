@@ -35,6 +35,7 @@
 
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/gallery.css">
 </head>
 
 <body>
@@ -138,42 +139,12 @@
                 <p class="section__subtitle">フォトギャラリー</p>
             </div>
             <div class="gallery-preview__grid">
-                <a href="/gallery/" class="gallery-preview__item">
-                    <img src="/assets/images/hero_1.webp"
-                        srcset="/assets/images/hero_1-480w.webp 480w, /assets/images/hero_1-768w.webp 768w"
-                        sizes="(max-width: 767px) 50vw, 200px"
-                        alt="ニューボーンフォト 1" loading="lazy">
-                </a>
-                <a href="/gallery/" class="gallery-preview__item">
-                    <img src="/assets/images/hero_2.webp"
-                        srcset="/assets/images/hero_2-480w.webp 480w, /assets/images/hero_2-768w.webp 768w"
-                        sizes="(max-width: 767px) 50vw, 200px"
-                        alt="ニューボーンフォト 2" loading="lazy">
-                </a>
-                <a href="/gallery/" class="gallery-preview__item">
-                    <img src="/assets/images/hero_3.webp"
-                        srcset="/assets/images/hero_3-480w.webp 480w, /assets/images/hero_3-768w.webp 768w"
-                        sizes="(max-width: 767px) 50vw, 200px"
-                        alt="ニューボーンフォト 3" loading="lazy">
-                </a>
-                <a href="/gallery/" class="gallery-preview__item">
-                    <img src="/assets/images/hero_4.webp"
-                        srcset="/assets/images/hero_4-480w.webp 480w, /assets/images/hero_4-768w.webp 768w"
-                        sizes="(max-width: 767px) 50vw, 200px"
-                        alt="ニューボーンフォト 4" loading="lazy">
-                </a>
-                <a href="/gallery/" class="gallery-preview__item">
-                    <img src="/assets/images/hero_5.webp"
-                        srcset="/assets/images/hero_5-480w.webp 480w, /assets/images/hero_5-768w.webp 768w"
-                        sizes="(max-width: 767px) 50vw, 200px"
-                        alt="ニューボーンフォト 5" loading="lazy">
-                </a>
-                <a href="/gallery/" class="gallery-preview__item">
-                    <img src="/assets/images/concept.webp"
-                        srcset="/assets/images/concept-480w.webp 480w, /assets/images/concept-768w.webp 768w"
-                        sizes="(max-width: 767px) 50vw, 200px"
-                        alt="ニューボーンフォト 6" loading="lazy">
-                </a>
+                <a class="gallery__item"><div class="gallery__thumb"><img src="/assets/images/gallery/gallery_1.jpg" alt="ニューボーンフォト 1" loading="lazy"></div></a>
+                <a class="gallery__item"><div class="gallery__thumb"><img src="/assets/images/gallery/gallery_2.jpg" alt="ニューボーンフォト 2" loading="lazy"></div></a>
+                <a class="gallery__item"><div class="gallery__thumb"><img src="/assets/images/gallery/gallery_3.jpg" alt="ニューボーンフォト 3" loading="lazy"></div></a>
+                <a class="gallery__item"><div class="gallery__thumb"><img src="/assets/images/gallery/gallery_4.jpg" alt="ニューボーンフォト 4" loading="lazy"></div></a>
+                <a class="gallery__item"><div class="gallery__thumb"><img src="/assets/images/gallery/gallery_6.jpg" alt="ニューボーンフォト 5" loading="lazy"></div></a>
+                <a class="gallery__item"><div class="gallery__thumb"><img src="/assets/images/gallery/gallery_7.jpg" alt="ニューボーンフォト 6" loading="lazy"></div></a>
             </div>
             <a href="/gallery/" class="section__more">フォトギャラリー</a>
         </section>
@@ -230,9 +201,15 @@
             </div>
             <div class="voice-preview__list">
                 <article class="voice-preview__card">
+                    <div class="voice-preview__image">
+                        <img src="/assets/images/voice_1.png" alt="" width="64" height="64" loading="lazy">
+                    </div>
                     <p class="voice-preview__text">自然であまり派手ではなくナチュラルな感じを探していたので、お写真の感じがすごく素敵でお願いさせていただきました。</p>
                 </article>
                 <article class="voice-preview__card">
+                    <div class="voice-preview__image">
+                        <img src="/assets/images/voice_2.png" alt="" width="64" height="64" loading="lazy">
+                    </div>
                     <p class="voice-preview__text">赤ちゃんの自然体な写真、今しかない貴重な姿を残すことができて、お願いをして本当に良かったです。</p>
                 </article>
             </div>
@@ -293,8 +270,20 @@
         <p class="footer__copyright">&copy; little seeds photography</p>
     </footer>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="写真拡大表示">
+        <button class="lightbox__close" aria-label="閉じる">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path transform="translate(4, 4)" d="M21.9199 0.707031L11.667 10.96L21.9199 21.2129L21.2129 21.9199L10.96 11.667L0.707031 21.9199L0 21.2129L10.2529 10.96L0 0.707031L0.707031 0L10.96 10.2529L21.2129 0L21.9199 0.707031Z" fill="white"/>
+            </svg>
+        </button>
+        <div class="lightbox__image-wrapper"></div>
+        <p class="lightbox__counter"><span class="lightbox__current">1</span> / <span class="lightbox__total">6</span></p>
+    </div>
+
     <script src="/js/common.js"></script>
     <script src="/js/home.js"></script>
+    <script src="/js/gallery.js"></script>
 </body>
 
 </html>
