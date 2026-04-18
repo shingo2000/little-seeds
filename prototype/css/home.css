@@ -142,6 +142,35 @@
 }
 
 /* ========================================
+   Home - Voice Preview
+   ======================================== */
+
+.voice-preview__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.voice-preview__card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: var(--space-3);
+}
+
+.voice-preview__card .placeholder {
+    width: 100%;
+    border-radius: var(--radius-banner);
+    margin-bottom: var(--space-2);
+}
+
+.voice-preview__text {
+    font-size: var(--font-size-m);
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+}
+
+/* ========================================
    Home - FAQ Preview
    ======================================== */
 
@@ -194,6 +223,16 @@
         flex: 1;
         max-width: 300px;
     }
+
+    .voice-preview__list {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .voice-preview__card {
+        flex: 1;
+        max-width: 340px;
+    }
 }
 
 /* ========================================
@@ -218,6 +257,12 @@
     }
 
     .plan-preview__cards {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .voice-preview__list {
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;

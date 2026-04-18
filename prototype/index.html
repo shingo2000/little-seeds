@@ -15,9 +15,10 @@
 
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/home.css">
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
 </head>
 
-<body>
+<body style="max-width:390px;margin:0 auto">
     <!-- [共通] ヘッダー -->
     <header class="header">
         <div class="header__inner" style="justify-content: flex-end">
@@ -69,6 +70,12 @@
                 <a href="/faq/">
                     <span class="menu-overlay__en">FAQ</span>
                     <span class="menu-overlay__ja">よくある質問</span>
+                </a>
+            </li>
+            <li class="menu-overlay__item">
+                <a href="/voice/">
+                    <span class="menu-overlay__en">Voice</span>
+                    <span class="menu-overlay__ja">お客様の声</span>
                 </a>
             </li>
             <li class="menu-overlay__item">
@@ -155,8 +162,27 @@
             <a href="/plan/" class="section__more">View More</a>
         </section>
 
-        <!-- FAQ Preview -->
+        <!-- Voice Preview -->
         <section class="section section--warm">
+            <div class="section__heading">
+                <h2 class="section__title">Voice</h2>
+                <p class="section__subtitle">お客様の声</p>
+            </div>
+            <div class="voice-preview__list">
+                <article class="voice-preview__card">
+                    <div class="placeholder" style="aspect-ratio:4/3">voice-01.webp</div>
+                    <p class="voice-preview__text">自然であまり派手ではなくナチュラルな感じを探していたので、お写真の感じがすごく素敵でお願いさせていただきました。</p>
+                </article>
+                <article class="voice-preview__card">
+                    <div class="placeholder" style="aspect-ratio:4/3">voice-02.webp</div>
+                    <p class="voice-preview__text">赤ちゃんの自然体な写真、今しかない貴重な姿を残すことができて、お願いをして本当に良かったです。</p>
+                </article>
+            </div>
+            <a href="/voice/" class="section__more">View More</a>
+        </section>
+
+        <!-- FAQ Preview -->
+        <section class="section">
             <div class="section__heading">
                 <h2 class="section__title">FAQ</h2>
                 <p class="section__subtitle">よくある質問</p>
@@ -194,6 +220,7 @@
                 <li><a href="/gallery/" class="footer__nav-link">Gallery</a></li>
                 <li><a href="/plan/" class="footer__nav-link">Plan</a></li>
                 <li><a href="/faq/" class="footer__nav-link">FAQ</a></li>
+                <li><a href="/voice/" class="footer__nav-link">Voice</a></li>
                 <li><a href="/contact/" class="footer__nav-link">Contact</a></li>
             </ul>
         </nav>
