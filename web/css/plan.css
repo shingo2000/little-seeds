@@ -1,0 +1,378 @@
+/* ========================================
+   Plan - Cards
+   ======================================== */
+
+.plan__cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+.plan-card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: var(--space-4);
+}
+
+.plan-card__name {
+    font-family: var(--font-en);
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+}
+
+.plan-card__desc {
+    font-size: var(--font-size-s);
+    color: var(--color-text-subtle);
+    text-align: center;
+    letter-spacing: 0.13em;
+    margin-top: var(--space-1);
+    line-height: 1.4;
+}
+
+.plan-card__image-wrapper {
+    margin: var(--space-2) 0;
+}
+
+.plan-card__image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4 / 2.67;
+}
+
+.plan-card__badge {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: var(--color-accent);
+    color: white;
+    font-size: var(--font-size-s);
+    letter-spacing: 0.13em;
+    padding: 0 var(--space-1);
+    height: 24px;
+    line-height: 24px;
+    border-radius: 8px;
+}
+
+.plan-card__price {
+    text-align: center;
+    margin: var(--space-2) 0;
+}
+
+.plan-card__price-original {
+    display: block;
+    font-size: var(--font-size-s);
+    color: var(--color-text-subtle);
+    letter-spacing: 0.13em;
+    text-decoration: line-through;
+}
+
+.plan-card__price--discount .plan-card__price-amount,
+.plan-card__price--discount .plan-card__price-unit {
+    color: var(--color-accent);
+}
+
+.plan-card__price-amount {
+    font-family: var(--font-en);
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+}
+
+.plan-card__price-unit {
+    font-size: var(--font-size-s);
+    letter-spacing: 0.13em;
+    margin-left: var(--space-0_5);
+}
+
+.plan-card__price-tax {
+    display: block;
+    font-size: var(--font-size-s);
+    color: var(--color-text-subtle);
+    letter-spacing: 0.13em;
+}
+
+.plan-card__price-extra {
+    display: block;
+    font-size: var(--font-size-m);
+    letter-spacing: 0.08em;
+    margin-top: var(--space-0_5);
+}
+
+.plan-card__features {
+    margin: var(--space-2) 0;
+}
+
+.plan-card__feature {
+    padding: 8px 0 9px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.plan-card__feature:last-child {
+    border-bottom: none;
+}
+
+.plan-card__feature-main {
+    display: block;
+    font-size: var(--font-size-m);
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+}
+
+.plan-card__feature-note {
+    display: block;
+    font-size: var(--font-size-s);
+    color: var(--color-text-subtle);
+    letter-spacing: 0.13em;
+    line-height: 1.4;
+    margin-top: 5px;
+}
+
+.plan-card__banner {
+    background-color: var(--color-bg-warm);
+    border-radius: var(--radius-banner);
+    padding: var(--space-2) var(--space-3);
+}
+
+.plan-card__banner-label {
+    display: block;
+    font-size: var(--font-size-s);
+    color: var(--color-text-subtle);
+    letter-spacing: 0.13em;
+    line-height: 1.4;
+}
+
+.plan-card__banner-benefit {
+    display: block;
+    font-size: var(--font-size-m);
+    color: var(--color-text);
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    margin-top: var(--space-0_5);
+}
+
+/* ========================================
+   Plan - Options
+   ======================================== */
+
+.plan-options {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: var(--space-4);
+}
+
+.plan-options__title {
+    font-family: var(--font-ja);
+    font-size: var(--font-size-l);
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    margin-bottom: var(--space-2);
+}
+
+.plan-options__item {
+    display: flex;
+    align-items: center;
+    padding: var(--space-2) var(--space-1);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.plan-options__item:last-child {
+    border-bottom: none;
+}
+
+.plan-options__term {
+    flex: 1;
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+}
+
+.plan-options__term small {
+    display: block;
+    font-size: var(--font-size-s);
+    font-weight: 300;
+    color: var(--color-text-subtle);
+    letter-spacing: 0.13em;
+    line-height: 1.4;
+}
+
+.plan-options__detail {
+    flex: 1;
+    text-align: right;
+}
+
+.plan-options__price {
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+}
+
+.plan-options__tax {
+    display: block;
+    font-size: var(--font-size-s);
+    color: var(--color-text-subtle);
+    letter-spacing: 0.13em;
+}
+
+/* ========================================
+   Plan - Area
+   ======================================== */
+
+.area__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    max-width: 600px;
+}
+
+.area__lead {
+    font-size: var(--font-size-m);
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+}
+
+.area__item {
+    display: flex;
+    align-items: center;
+    padding: var(--space-1);
+    font-size: var(--font-size-m);
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.area__item:last-child {
+    border-bottom: none;
+}
+
+.area__item dt {
+    flex: 1;
+    font-weight: 400;
+}
+
+.area__item dd {
+    flex-shrink: 0;
+    font-weight: 400;
+    text-align: right;
+}
+
+.area__note {
+    font-size: var(--font-size-s);
+    color: var(--color-text-subtle);
+    letter-spacing: 0.13em;
+    line-height: 1.4;
+}
+
+/* ========================================
+   Plan - Flow
+   ======================================== */
+
+.flow__steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.flow__item-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-1);
+}
+
+.flow__number {
+    font-family: var(--font-en);
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+    width: 40px;
+    flex-shrink: 0;
+}
+
+.flow__item-title {
+    font-family: var(--font-ja);
+    font-size: var(--font-size-l);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.flow__item-body {
+    margin-left: var(--space-2);
+    padding: var(--space-1) 0 var(--space-3) var(--space-3);
+    border-left: 0.5px solid var(--color-text-subtle);
+}
+
+.flow__item:last-child .flow__item-body {
+    border-left: none;
+}
+
+.flow__item-body p {
+    font-size: var(--font-size-m);
+    color: var(--color-text-subtle);
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+}
+
+/* ========================================
+   Responsive - Tablet (768px+)
+   ======================================== */
+
+@media (min-width: 768px) {
+    .plan-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .plan-options {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .flow__steps {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .area__content {
+        margin: 0 auto;
+    }
+}
+
+/* ========================================
+   Responsive - Desktop (1024px+)
+   ======================================== */
+
+@media (min-width: 1024px) {
+    .plan__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .plan-card {
+        max-width: none;
+        padding: 32px;
+    }
+
+    .plan-options {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .flow__steps {
+        max-width: 700px;
+    }
+}

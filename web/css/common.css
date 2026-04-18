@@ -1,0 +1,503 @@
+/* ========================================
+   little seeds photography - Common Styles
+   ======================================== */
+
+:root {
+    /* Colors */
+    --color-bg: #ffffff;
+    --color-bg-warm: #ede8e2;
+    --color-text: #111111;
+    --color-text-subtle: #666666;
+    --color-border: #e0e0e0;
+    --color-accent: #c45c5c;
+
+    /* Fonts */
+    --font-en: 'Quicksand', sans-serif;
+    --font-ja: 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro',
+        'Hiragino Sans', 'Noto Sans JP', 'BIZ UDPGothic',
+        'Meiryo', 'Yu Gothic Medium', sans-serif;
+
+    /* Font Sizes */
+    --font-size-s: 13px;
+    --font-size-m: 15px;
+    --font-size-l: 18px;
+    --font-size-xl: 24px;
+    --font-size-2xl: 32px;
+
+    /* Spacing */
+    --space-0_5: 4px;
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 40px;
+    --space-5: 64px;
+
+    /* Radius */
+    --radius-card: 16px;
+    --radius-banner: 8px;
+
+    /* Layout */
+    --header-height: 70px;
+    --side-padding: 20px;
+}
+
+/* ========================================
+   Base Reset & Typography
+   ======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-ja);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul,
+ol,
+dl {
+    list-style: none;
+}
+
+/* ========================================
+   Header
+   ======================================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: transparent;
+    z-index: 100;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 var(--side-padding);
+}
+
+.header__logo {
+    font-family: var(--font-en);
+    font-size: var(--font-size-l);
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    color: var(--color-text);
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.header__sns-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.header__menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+}
+
+/* ========================================
+   Menu Overlay
+   ======================================== */
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background-color: var(--color-bg-warm);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 var(--space-4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.menu-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.menu-overlay__header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: var(--header-height);
+    padding: 0 var(--side-padding);
+}
+
+.menu-overlay__close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-overlay__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-overlay__item a {
+    display: block;
+}
+
+.menu-overlay__en {
+    display: block;
+    font-family: var(--font-en);
+    font-size: var(--font-size-xl);
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+}
+
+.menu-overlay__ja {
+    display: block;
+    font-size: var(--font-size-s);
+    color: var(--color-text-subtle);
+    letter-spacing: 0.13em;
+    margin-top: var(--space-0_5);
+    line-height: 1.4;
+}
+
+/* ========================================
+   Section Common
+   ======================================== */
+
+.section {
+    padding: var(--space-5) var(--side-padding);
+}
+
+.section--warm {
+    background-color: var(--color-bg-warm);
+}
+
+.section__heading {
+    text-align: center;
+    margin-bottom: var(--space-4);
+}
+
+.section__title {
+    font-family: var(--font-en);
+    font-size: var(--font-size-2xl);
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+    color: var(--color-text);
+}
+
+.section__subtitle {
+    font-size: var(--font-size-s);
+    color: var(--color-text-subtle);
+    letter-spacing: 0.13em;
+    margin-top: var(--space-1);
+    line-height: 1.4;
+}
+
+.section__image-wrapper {
+    margin-bottom: var(--space-4);
+}
+
+.section__image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+}
+
+/* ========================================
+   Section Link (more button)
+   ======================================== */
+
+.section__more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+    height: 48px;
+    margin: var(--space-4) auto 0;
+    padding: 0 var(--space-2) 0 var(--space-3);
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-banner);
+    font-family: var(--font-en);
+    font-size: var(--font-size-s);
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.13em;
+    text-align: center;
+    color: var(--color-accent);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* center-align when used as a block-level link */
+a.section__more {
+    display: flex;
+    width: fit-content;
+}
+
+.section__more::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M6 3l5 5-5 5' fill='none' stroke='currentColor' stroke-width='1.5'/></svg>") center/contain no-repeat;
+            mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M6 3l5 5-5 5' fill='none' stroke='currentColor' stroke-width='1.5'/></svg>") center/contain no-repeat;
+}
+
+.section__more:hover {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    opacity: 1;
+}
+
+/* ========================================
+   Contact Common
+   ======================================== */
+
+.contact__content {
+    text-align: center;
+}
+
+.contact__text {
+    font-size: var(--font-size-m);
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-2);
+}
+
+.contact__btn {
+    display: inline-block;
+    width: 300px;
+    max-width: 100%;
+    padding: 14px var(--space-1);
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-align: center;
+    border-radius: var(--radius-banner);
+    transition: opacity 0.3s ease;
+}
+
+.contact__btn:hover {
+    opacity: 0.8;
+}
+
+.contact__link {
+    display: block;
+    margin-top: var(--space-4);
+    font-family: var(--font-ja);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    color: var(--color-text);
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+    text-decoration: underline;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+.footer {
+    padding: var(--space-4) var(--side-padding);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.footer__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.footer__nav-link {
+    font-family: var(--font-en);
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+    color: var(--color-text-subtle);
+}
+
+.footer__sns {
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+}
+
+.footer__sns-link {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.footer__copyright {
+    font-family: var(--font-en);
+    font-size: var(--font-size-s);
+    color: var(--color-text-subtle);
+    letter-spacing: 0.06em;
+}
+
+/* ========================================
+   Placeholder (prototype only)
+   ======================================== */
+
+.placeholder {
+    background-color: var(--color-bg-warm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-en);
+    font-size: var(--font-size-s);
+    color: var(--color-text-subtle);
+    letter-spacing: 0.06em;
+}
+
+/* ========================================
+   Responsive - Tablet (768px+)
+   ======================================== */
+
+@media (min-width: 768px) {
+    :root {
+        --side-padding: 40px;
+    }
+
+    .section {
+        padding: 80px var(--side-padding);
+    }
+
+    .section__title {
+        font-size: 36px;
+    }
+
+    .menu-overlay {
+        padding: 0 80px;
+    }
+
+    .menu-overlay__en {
+        font-size: 28px;
+    }
+}
+
+/* ========================================
+   Responsive - Desktop (1024px+)
+   ======================================== */
+
+@media (min-width: 1024px) {
+    :root {
+        --side-padding: 60px;
+    }
+
+    .section {
+        padding: 100px var(--side-padding);
+    }
+
+    .section__heading,
+    .contact__content {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section__image-wrapper {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 48px;
+    }
+
+    .menu-overlay {
+        align-items: center;
+    }
+
+    .menu-overlay__header {
+        left: 0;
+        right: 0;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .menu-overlay__list {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .header__inner {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}

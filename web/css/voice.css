@@ -1,0 +1,45 @@
+/* ========================================
+   Voice - お客様の声
+   ======================================== */
+
+.voice__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.voice__card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: var(--space-3);
+}
+
+.voice__image {
+    margin-bottom: var(--space-2);
+    overflow: hidden;
+    border-radius: var(--radius-banner);
+}
+
+.voice__image .placeholder,
+.voice__image img {
+    width: 100%;
+    display: block;
+}
+
+.voice__text {
+    font-size: var(--font-size-m);
+    line-height: 1.9;
+    letter-spacing: 0.08em;
+}
+
+/* ========================================
+   Responsive - Tablet (768px+)
+   ======================================== */
+
+@media (min-width: 768px) {
+    .voice__list {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
