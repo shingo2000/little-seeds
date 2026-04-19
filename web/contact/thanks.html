@@ -22,13 +22,12 @@
 
     <link rel="stylesheet" href="/css/common.css">
     <style>
-    .contact-page { padding-top: calc(var(--header-height) + var(--space-5)); }
     .thanks-message { text-align: center; margin-bottom: var(--space-4); font-size: var(--font-size-m); line-height: 2; letter-spacing: 0.08em; }
     .contact-page__back { text-align: center; }
     </style>
 </head>
 
-<body>
+<body class="subpage">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMTQD6NL"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -37,7 +36,6 @@
     <!-- [共通] ヘッダー -->
     <header class="header">
         <div class="header__inner">
-            <a href="/" class="header__logo">little seeds<br>photography</a>
             <div class="header__actions">
                 <a href="https://www.instagram.com/littleseeds_photo/" class="header__sns-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <img src="/assets/images/icon-instagram.svg" alt="" width="30" height="30">
@@ -72,6 +70,11 @@
             <li class="menu-overlay__item"><a href="/contact/"><span class="menu-overlay__en">Contact</span><span class="menu-overlay__ja">お問い合わせ</span></a></li>
         </ul>
     </nav>
+
+    <!-- [共通] サイトロゴ -->
+    <div class="site-logo">
+        <a href="/" class="site-logo__link">little seeds<br>photography</a>
+    </div>
 
     <main>
         <section class="section contact-page">

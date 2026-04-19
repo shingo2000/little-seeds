@@ -90,7 +90,6 @@
     width: 100%;
     aspect-ratio: 4096 / 2730;
     object-fit: cover;
-    border-radius: var(--radius-card);
     margin-bottom: var(--space-3);
 }
 
