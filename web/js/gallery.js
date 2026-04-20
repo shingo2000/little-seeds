@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const slide = document.createElement('div');
         slide.className = 'lightbox__slide';
         const slideImg = document.createElement('img');
-        slideImg.src = img.src;
+        slideImg.src = item.dataset.full || img.src;
         slideImg.alt = img.alt || '';
         slideImg.loading = 'lazy';
         slide.appendChild(slideImg);
