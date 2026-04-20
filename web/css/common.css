@@ -103,6 +103,7 @@ dl {
     height: var(--header-height);
     background-color: transparent;
     z-index: 100;
+    pointer-events: none;
 }
 
 .header__inner {
@@ -117,6 +118,7 @@ dl {
     display: flex;
     align-items: center;
     gap: var(--space-2);
+    pointer-events: auto;
 }
 
 .header__sns-link {
