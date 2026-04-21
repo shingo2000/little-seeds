@@ -1,5 +1,8 @@
 /*.png
 
+# 参考用スクリーンショット
+/screenshots/
+
 # Python
 __pycache__/
 *.py[cod]
