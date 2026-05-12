@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>little seeds photography SEO戦略評価レポート（2026-05-12）</title>
+<style>
+  :root {
+    --c-text: #1f2937;
+    --c-muted: #6b7280;
+    --c-line: #e5e7eb;
+    --c-bg-soft: #f9fafb;
+    --c-accent: #d97757;
+    --c-accent-soft: #fef3ee;
+    --c-good: #047857;
+    --c-bad: #b91c1c;
+    --c-warn: #b45309;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+    color: var(--c-text);
+    background: #fff;
+    margin: 0;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+  .wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 56px 32px 96px;
+  }
+  header.report {
+    border-bottom: 2px solid var(--c-accent);
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+  }
+  header.report h1 {
+    font-size: 26px;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+  header.report .meta {
+    color: var(--c-muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  header.report .meta div { margin: 2px 0; }
+  h2 {
+    font-size: 22px;
+    margin: 56px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--c-line);
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 17px;
+    margin: 36px 0 12px;
+    color: var(--c-text);
+  }
+  h3.action {
+    background: var(--c-accent-soft);
+    color: #92400e;
+    padding: 10px 14px;
+    border-left: 4px solid var(--c-accent);
+    border-radius: 2px;
+  }
+  h3.action .stars {
+    color: var(--c-accent);
+    font-size: 14px;
+    margin-right: 8px;
+    letter-spacing: 1px;
+  }
+  p { margin: 12px 0; }
+  ul, ol { padding-left: 24px; margin: 12px 0; }
+  ul li, ol li { margin: 4px 0; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid var(--c-line);
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--c-bg-soft);
+    font-weight: 600;
+  }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .summary {
+    background: var(--c-bg-soft);
+    border-left: 4px solid var(--c-accent);
+    padding: 20px 24px;
+    margin: 24px 0 32px;
+    border-radius: 2px;
+  }
+  .summary strong { color: var(--c-accent); }
+  .summary ol { margin: 12px 0 0; padding-left: 22px; }
+  .summary ol li { margin: 6px 0; }
+  .good { color: var(--c-good); font-weight: 600; }
+  .bad { color: var(--c-bad); font-weight: 600; }
+  .warn { color: var(--c-warn); font-weight: 600; }
+  .check { color: var(--c-good); }
+  .cross { color: var(--c-bad); }
+  .callout {
+    border: 1px solid var(--c-line);
+    background: #fff;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 14px 0;
+  }
+  .callout.warn { border-left: 4px solid var(--c-warn); background: #fffaf0; }
+  .callout.good { border-left: 4px solid var(--c-good); background: #f0fdf4; }
+  .callout .label {
+    font-size: 12px;
+    color: var(--c-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+  .funnel {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--c-bg-soft);
+    padding: 14px 18px;
+    border-radius: 4px;
+    white-space: pre;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .stars-cell { color: var(--c-accent); letter-spacing: 1px; }
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .kpi {
+    border: 1px solid var(--c-line);
+    border-radius: 6px;
+    padding: 14px 16px;
+    background: #fff;
+  }
+  .kpi .label { font-size: 12px; color: var(--c-muted); }
+  .kpi .value { font-size: 22px; font-weight: 700; margin: 4px 0 0; }
+  .kpi .delta { font-size: 12px; color: var(--c-muted); }
+  .delta.up { color: var(--c-good); }
+  .delta.down { color: var(--c-bad); }
+  footer.report {
+    margin-top: 64px;
+    padding-top: 20px;
+    border-top: 1px solid var(--c-line);
+    font-size: 12px;
+    color: var(--c-muted);
+  }
+  footer.report code {
+    background: var(--c-bg-soft);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 11.5px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report">
+  <h1>little seeds photography SEO戦略評価レポート</h1>
+  <div class="meta">
+    <div>作成日: 2026-05-12</div>
+    <div>対象サイト: <a href="https://little-seeds.ayako-suzuki.net/">https://little-seeds.ayako-suzuki.net/</a></div>
+    <div>データソース: Google Search Console（2026-03-06〜05-12, 3ヶ月）／GA4（2026-04-14〜05-11, 4週間）／競合検索結果（2026-05-12）</div>
+  </div>
+</header>
+
+<div class="summary">
+  <p><strong>結論</strong>: 2026年3月の二軸戦略（地域×スタイル）は <strong>半分達成、半分未達</strong>。地域軸の「藤沢」は順位8-9位で安定したが、スタイル軸（ナチュラル/自然体）と並行地域（湘南/鎌倉/茅ヶ崎）は <strong>表示すら出ていない</strong>。一方で <strong>検索流入比率は 14.8% → 32.9% に倍増</strong>しており、テクニカル基盤と既存トラフィック品質は良好。</p>
+  <p>次の3ヶ月は <strong>「広げる」より「深める」</strong> に方針転換すべき。</p>
+  <ol>
+    <li><strong>「ニューボーンフォト 藤沢」で2-3位獲得</strong>に資源集中（最大の伸び代）</li>
+    <li><strong>商圏を藤沢/茅ヶ崎/鎌倉の3市に絞る</strong>（横浜・湘南は撤退、ライフパレット寡占を避ける）</li>
+    <li><strong>CV導線の強化</strong>（CV2件はすべて/contact直来訪、回遊CVゼロ）</li>
+    <li><strong>MEO（GBP口コミ獲得）</strong>を最優先施策に格上げ</li>
+    <li>スタイル軸は <strong>記事型ロングテール</strong> に切り替え、正面勝負はしない</li>
+  </ol>
+</div>
+
+<h2>1. 現状分析</h2>
+
+<h3>1-1. Google Search Console（3ヶ月実績）</h3>
+
+<div class="kpi-grid">
+  <div class="kpi"><div class="label">期間総クリック数</div><div class="value">94</div></div>
+  <div class="kpi"><div class="label">期間総表示回数</div><div class="value">510</div></div>
+  <div class="kpi"><div class="label">平均CTR</div><div class="value">18.4%</div><div class="delta up">標準の約6倍</div></div>
+  <div class="kpi"><div class="label">平均掲載順位</div><div class="value">8.47</div></div>
+  <div class="kpi"><div class="label">表示クエリ数</div><div class="value">3</div><div class="delta down">目標10に対し</div></div>
+</div>
+
+<p><strong>表示されているクエリ（事実上3つ）</strong>:</p>
+<table>
+  <thead><tr><th>クエリ</th><th class="num">クリック</th><th class="num">表示</th><th class="num">CTR</th><th class="num">順位</th></tr></thead>
+  <tbody>
+    <tr><td>ニューボーンフォト 藤沢</td><td class="num">42</td><td class="num">246</td><td class="num">17.07%</td><td class="num">9.04</td></tr>
+    <tr><td>藤沢 ニューボーンフォト</td><td class="num">19</td><td class="num">108</td><td class="num">17.59%</td><td class="num">8.39</td></tr>
+    <tr><td>little seeds photography</td><td class="num">3</td><td class="num">9</td><td class="num">33.33%</td><td class="num">5.78</td></tr>
+  </tbody>
+</table>
+
+<p><strong>ページ別</strong>:</p>
+<table>
+  <thead><tr><th>ページ</th><th class="num">クリック</th><th class="num">表示</th></tr></thead>
+  <tbody>
+    <tr><td>/</td><td class="num">92</td><td class="num">509</td></tr>
+    <tr><td>/voice/</td><td class="num">1</td><td class="num">3</td></tr>
+    <tr><td>/faq/</td><td class="num">1</td><td class="num">2</td></tr>
+    <tr><td>/plan/</td><td class="num">0</td><td class="num">2</td></tr>
+    <tr><td>/gallery/</td><td class="num">0</td><td class="num">2</td></tr>
+    <tr><td>/about/</td><td class="num">0</td><td class="num">1</td></tr>
+  </tbody>
+</table>
+
+<div class="callout warn">
+  <div class="label">重要</div>
+  <strong>CTR 17-18%は順位9位の標準（2-3%）の6倍以上</strong>。タイトル・ディスクリプションは効いている。<strong>順位を上げればクリックは比例して伸びる</strong>。新設ページ（gallery/plan/about/voice/faq）はSEO上ほぼ存在しない状態。デバイス別: PC 7.06位 / モバイル 10.4位 → <strong>モバイル順位が3ランク下</strong>。
+</div>
+
+<h3>1-2. GA4（4週間, 2026-04-14〜05-11）</h3>
+
+<p><strong>チャネル別</strong>:</p>
+<table>
+  <thead><tr><th>チャネル</th><th class="num">セッション</th><th class="num">エンゲ率</th><th class="num">平均時間</th><th class="num">CV</th></tr></thead>
+  <tbody>
+    <tr><td>Organic Social</td><td class="num">102</td><td class="num">56.86%</td><td class="num">23秒</td><td class="num">1</td></tr>
+    <tr><td><strong>Organic Search</strong></td><td class="num"><strong>76</strong></td><td class="num"><strong>65.79%</strong></td><td class="num"><strong>45秒</strong></td><td class="num"><strong>1</strong></td></tr>
+    <tr><td>Direct</td><td class="num">48</td><td class="num">77.08%</td><td class="num">120秒</td><td class="num">0</td></tr>
+    <tr><td>Referral</td><td class="num">5</td><td class="num">60.00%</td><td class="num">7秒</td><td class="num">0</td></tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Organic Search比率 32.9%</strong>（前計画策定時 14.8% から倍増）<span class="check">✓</span></li>
+  <li>Organic Search の滞在 45秒 は Social（23秒）の 2倍 = <strong>検索流入の質が最も高い</strong></li>
+  <li>Direct は 120秒 滞在しているが CV0 = 指名検索/再訪者だが決め手不足</li>
+</ul>
+
+<p><strong>ランディングページ別</strong>:</p>
+<table>
+  <thead><tr><th>LP</th><th class="num">セッション</th><th class="num">CV</th></tr></thead>
+  <tbody>
+    <tr><td>/</td><td class="num">177</td><td class="num">2</td></tr>
+    <tr><td>/plan</td><td class="num">14</td><td class="num">0</td></tr>
+    <tr><td>/gallery</td><td class="num">9</td><td class="num">0</td></tr>
+    <tr><td>/about</td><td class="num">7</td><td class="num">0</td></tr>
+    <tr><td>/voice</td><td class="num">3</td><td class="num">0</td></tr>
+    <tr><td>/faq</td><td class="num">2</td><td class="num">0</td></tr>
+    <tr><td>/contact</td><td class="num">1</td><td class="num">0</td></tr>
+  </tbody>
+</table>
+<p><span class="bad">88%のセッションがトップ起点</span>。新設ページは検索の入口になっていない。</p>
+
+<p><strong>ページ別PV・滞在</strong>:</p>
+<table>
+  <thead><tr><th>ページ</th><th class="num">PV</th><th class="num">ユーザー</th><th class="num">平均時間</th></tr></thead>
+  <tbody>
+    <tr><td>/</td><td class="num">330</td><td class="num">102</td><td class="num">48秒</td></tr>
+    <tr><td>/gallery/</td><td class="num">106</td><td class="num">37</td><td class="num">43秒</td></tr>
+    <tr><td>/plan/</td><td class="num">76</td><td class="num">37</td><td class="num">56秒</td></tr>
+    <tr><td>/about/</td><td class="num">48</td><td class="num">26</td><td class="num">27秒</td></tr>
+    <tr><td>/faq/</td><td class="num">43</td><td class="num">22</td><td class="num"><strong>72秒</strong></td></tr>
+    <tr><td>/voice/</td><td class="num">35</td><td class="num">15</td><td class="num">34秒</td></tr>
+    <tr><td>/contact/</td><td class="num">21</td><td class="num">13</td><td class="num">12秒</td></tr>
+  </tbody>
+</table>
+<p><span class="good">サイト内回遊は機能している</span>。トップ起点でplan/galleryへの回遊が成立、FAQの平均72秒は高品質シグナル。</p>
+
+<p><strong>コンバージョンファネル（4週）</strong>:</p>
+<div class="funnel">102 active users (top)
+  ↓
+ 37 /plan     37 /gallery
+  ↓
+ 13 /contact
+  ↓
+  2 CV</div>
+<p>CV2件はいずれも /contact 直来訪で発生。<strong>plan→contact、gallery→contact の回遊CVがゼロ</strong>。各ページのCTA設計が弱い。</p>
+
+<p><strong>市区町村（質的データ）</strong>:</p>
+<table>
+  <thead><tr><th>都市</th><th class="num">ユーザー</th><th class="num">平均時間</th><th class="num">エンゲ率</th><th class="num">CV</th></tr></thead>
+  <tbody>
+    <tr><td><strong>藤沢</strong></td><td class="num"><strong>35</strong></td><td class="num"><strong>266秒</strong></td><td class="num"><strong>69.5%</strong></td><td class="num"><strong>1</strong></td></tr>
+    <tr><td>横浜</td><td class="num">20</td><td class="num">37秒</td><td class="num">76%</td><td class="num">0</td></tr>
+    <tr><td>川崎</td><td class="num">7</td><td class="num">12秒</td><td class="num">43%</td><td class="num">0</td></tr>
+    <tr><td>相模原</td><td class="num">7</td><td class="num">11秒</td><td class="num">43%</td><td class="num">0</td></tr>
+    <tr><td>茅ヶ崎</td><td class="num">5</td><td class="num">11秒</td><td class="num">40%</td><td class="num">0</td></tr>
+    <tr><td>鎌倉</td><td class="num">3</td><td class="num">59秒</td><td class="num">100%</td><td class="num">0</td></tr>
+    <tr><td>平塚</td><td class="num">2</td><td class="num">0秒</td><td class="num">0%</td><td class="num">0</td></tr>
+  </tbody>
+</table>
+<div class="callout good">
+  <div class="label">最重要インサイト</div>
+  藤沢ユーザーが圧倒的にターゲットど真ん中: <strong>4分半の滞在 + CV発生</strong>。横浜は量があるが質が低い（37秒）。茅ヶ崎・鎌倉は量少ないが質候補。
+</div>
+
+<h3>1-3. 競合最新順位（2026-05-12, 実検索ベース）</h3>
+
+<table>
+  <thead><tr><th>キーワード</th><th>little seedsの位置</th><th>上位の特徴</th></tr></thead>
+  <tbody>
+    <tr><td>ニューボーンフォト 藤沢</td><td><span class="bad">圏外（10位以下）</span></td><td>baby marc 1位、2位以下は分散</td></tr>
+    <tr><td>ニューボーンフォト 湘南</td><td><span class="bad">圏外</span></td><td>ライフパレットが1,3位を寡占</td></tr>
+    <tr><td>ニューボーンフォト 鎌倉</td><td><span class="bad">圏外</span></td><td>ライフパレットが1,3,4位を寡占</td></tr>
+    <tr><td>ナチュラル ニューボーンフォト</td><td><span class="bad">圏外</span></td><td>Lovegraph/ふぉとるプラス等メディア優位</td></tr>
+    <tr><td>ニューボーンフォト 自然体</td><td><span class="bad">圏外</span></td><td>スタジオアリス1位、大手スタジオ・メディア優位</td></tr>
+  </tbody>
+</table>
+
+<p><strong>戦略上の重要な示唆</strong>:</p>
+<ul>
+  <li>「藤沢」は <strong>baby marc 1強で2位以下は分散</strong> → 2-3位は十分狙える</li>
+  <li>「湘南」「鎌倉」は <strong>ライフパレットがドメイン寡占</strong>で正面突破困難</li>
+  <li>「ナチュラル」「自然体」は <strong>大手メディア・スタジオが上位独占</strong>、個人サイトはほぼ無し</li>
+  <li>新たな脅威: <strong>マームガーデン（産後ケア）、シャレニー、らかんスタジオ</strong>が「自然体」軸で台頭</li>
+</ul>
+
+<h2>2. 戦略プランとのギャップ（2026-03-15プラン vs 実績）</h2>
+
+<table>
+  <thead><tr><th>KPI</th><th>3ヶ月後目標</th><th>実績</th><th>達成</th></tr></thead>
+  <tbody>
+    <tr><td>「ニューボーンフォト 藤沢」順位</td><td>5位以内</td><td>9.04位</td><td><span class="cross">✗</span></td></tr>
+    <tr><td>「ナチュラル ニューボーンフォト」順位</td><td>20位以内</td><td>圏外</td><td><span class="cross">✗</span></td></tr>
+    <tr><td>検索流入比率</td><td>25%</td><td><strong>32.9%</strong></td><td><span class="check">✓</span></td></tr>
+    <tr><td>月間セッション数</td><td>600</td><td>~250（4週231）</td><td><span class="cross">✗</span></td></tr>
+    <tr><td>CV率</td><td>2.5%</td><td>0.87%（全体）/1.32%（Organic Search）</td><td><span class="cross">✗</span></td></tr>
+    <tr><td>インデックスページ数</td><td>6</td><td>6</td><td><span class="check">✓</span></td></tr>
+    <tr><td>表示検索クエリ数</td><td>10</td><td>3</td><td><span class="cross">✗</span></td></tr>
+  </tbody>
+</table>
+
+<p><strong>最大のギャップ</strong>: ページを増やしても <strong>クエリ数が増えていない</strong>（目標10→実績3）。<strong>コンテンツ追加が表示数の拡大に繋がっていない</strong>。</p>
+
+<h2>3. 課題の構造的整理</h2>
+
+<h3>課題A: 新設ページがSEO上の入口になっていない</h3>
+<p>GSCで gallery/plan/about/voice/faq は <strong>合計10表示／2クリック</strong> にとどまる。一方GA4では同ページが回遊先として機能している。</p>
+<p><strong>仮説</strong>: タイトル・h1・本文に <strong>想定キーワードが不足</strong>している。例えば /gallery のタイトルが「Gallery | little seeds photography」のままだと、検索クエリと一致しない。</p>
+
+<h3>課題B: ランディング集中（88%がトップ）</h3>
+<p>検索ユーザーが gallery/voice/faq を直接見つけられていない。<strong>トップが落ちると全体が落ちる構造</strong>。</p>
+
+<h3>課題C: CV経路が脆弱</h3>
+<p>CV2件はすべて /contact 直来訪。<strong>plan→contact、gallery→contact の回遊CVがゼロ</strong>。各ページのCTA設計が弱い。</p>
+
+<h3>課題D: 商圏のミスマッチ</h3>
+<p>GA4の市区町村データを見ると、<strong>藤沢以外は質が低い</strong>: 横浜（量2位）は37秒、CV0。川崎・相模原は10秒程度。<strong>地域戦略は「広く浅く」より「藤沢で深く＋近接市の精鋭」</strong>が正解。</p>
+
+<h3>課題E: スタイル軸の正面勝負は不利</h3>
+<p>「ナチュラル」「自然体」KWは大手メディアが寡占。個人サイトが単独で取れる位置ではない。</p>
+
+<h2>4. 戦略の再設計（次の3ヶ月: 2026-05〜08）</h2>
+
+<div class="callout">
+  <div class="label">方針</div>
+  <strong>「広げる」から「深める」へ</strong>。ページを増やすフェーズは完了。次は <strong>既存ページの密度・質を上げて、藤沢で2-3位を獲りに行く</strong> フェーズ。
+</div>
+
+<h3 class="action"><span class="stars">⭐⭐⭐⭐⭐</span>施策1: 「ニューボーンフォト 藤沢」で2-3位獲得</h3>
+<p><strong>現状</strong>: 9.04位、CTR 17%　<strong>目標</strong>: 3位以内、月間クリック 100-150<br>
+<strong>根拠</strong>: baby marc以外は分散。CTRが既に高いので順位だけ上げれば良い</p>
+<ul>
+  <li>トップページに <strong>撮影実績数（具体数値）</strong> を追加（baby marcは「8年以上」と明示）</li>
+  <li>トップに <strong>お客様の声の抜粋＋voiceページへのリンク</strong> を追加（信頼性シグナル）</li>
+  <li>トップに <strong>Instagram埋め込み</strong> を追加（鮮度シグナル、競合多数が実装済み）</li>
+  <li>トップh1/h2の <strong>地域名密度を増やす</strong>（藤沢・湘南・茅ヶ崎・鎌倉の言及）</li>
+  <li>モバイル順位が3ランク下のため <strong>モバイル表示の改善</strong>（CLS/LCP実測、ヘッダー圧縮）</li>
+</ul>
+
+<h3 class="action"><span class="stars">⭐⭐⭐⭐⭐</span>施策2: MEO強化（GBP口コミ獲得）</h3>
+<p><strong>現状</strong>: GBP登録済み・公開中、口コミ獲得施策なし　<strong>目標</strong>: 3ヶ月で口コミ10件、星評価4.8以上<br>
+<strong>根拠</strong>: 地域検索で <strong>マップパック表示の優先順位がオーガニックより上</strong>。藤沢市内ユーザーの「ニューボーンフォト 藤沢」検索でマップに表示されることが最強</p>
+<ul>
+  <li>撮影完了後のサンクスメール／LINEに <strong>GBPレビュー誘導リンク</strong> を組み込む</li>
+  <li>GBPに <strong>撮影投稿を週1更新</strong>（Instagram投稿の流用でOK）</li>
+  <li>GBPに <strong>属性情報を充実</strong>（女性経営、出張対応、料金帯）</li>
+</ul>
+
+<h3 class="action"><span class="stars">⭐⭐⭐⭐</span>施策3: CV導線の強化（全ページ→contact）</h3>
+<p><strong>現状</strong>: plan→contact、gallery→contact の回遊CVゼロ　<strong>目標</strong>: CV率 0.87% → 2%<br>
+<strong>根拠</strong>: PV総数は十分（trafficはある）、CV率を上げる方が新規流入獲得より速い</p>
+<ul>
+  <li>plan/gallery/voice の <strong>各ページ末尾に固定CTA</strong>（「このプランで予約する」「料金を相談する」）</li>
+  <li>contact ページの <strong>平均滞在12秒</strong> = フォームが面倒・LINE導線が弱い可能性。LINE/問い合わせフォームの二択UIを目立たせる</li>
+  <li>voice/faq ページから <strong>LINEお問い合わせCTA</strong> をフローティングで設置</li>
+</ul>
+
+<h3 class="action"><span class="stars">⭐⭐⭐⭐</span>施策4: 商圏の再定義 — 藤沢/茅ヶ崎/鎌倉に絞る</h3>
+<p><strong>現状</strong>: 横浜・湘南・川崎・神奈川を漫然とターゲット　<strong>目標</strong>: 藤沢を主、茅ヶ崎・鎌倉を副ターゲットに固定<br>
+<strong>根拠</strong>: GA4市区町村データで質が高いのはこの3市。湘南・鎌倉はライフパレット寡占で正面突破不可</p>
+<ul>
+  <li>地域特化LPを2本だけ新設: <code>/area/chigasaki/</code>、<code>/area/kamakura/</code>
+    <ul>
+      <li>各ページに「茅ヶ崎/鎌倉での撮影事例3件以上」「アクセス情報」「地域固有の撮影スポット紹介」を含める</li>
+      <li><strong>湘南LP・横浜LPは作らない</strong>（リソース集中）</li>
+    </ul>
+  </li>
+  <li>既存トップに「対応エリア: 藤沢・茅ヶ崎・鎌倉を中心に」と明記</li>
+  <li>BreadcrumbList 構造化データを追加</li>
+</ul>
+
+<h3 class="action"><span class="stars">⭐⭐⭐</span>施策5: スタイル軸はブログ記事型ロングテールで</h3>
+<p><strong>現状</strong>: 「ナチュラル」「自然体」単独KWは大手寡占で取れない　<strong>目標</strong>: 複合長尾で月間表示 100-300<br>
+<strong>根拠</strong>: 「ナチュラル ニューボーンフォト 服装」「ニューボーンフォト 自然光 自宅」等の複合は大手も取りこぼしている</p>
+<ul>
+  <li>ガイドページ <code>/guide/</code> を <strong>コラム集約ページ</strong> として新設</li>
+  <li>記事候補:
+    <ul>
+      <li>ナチュラルなニューボーンフォトに最適な時間帯</li>
+      <li>自然体の写真を撮るための自宅環境準備</li>
+      <li>ニューボーンフォト 服装の選び方（赤ちゃん・家族）</li>
+      <li>ニューボーンフォトの撮影時期と予約タイミング</li>
+    </ul>
+  </li>
+  <li>各記事3,000字以上、独自写真を3-5枚以上含める</li>
+  <li>既存FAQと内部リンク連携</li>
+</ul>
+
+<h3 class="action"><span class="stars">⭐⭐⭐</span>施策6: 新設ページのタイトル・h1見直し</h3>
+<p><strong>現状</strong>: GSCで新設ページが全く表示されていない<br>
+<strong>根拠</strong>: タイトルが固有名のみでクエリと一致していない可能性</p>
+<p><strong>タイトル例の見直し</strong>:</p>
+<table>
+  <thead><tr><th>ページ</th><th>推奨タイトル</th></tr></thead>
+  <tbody>
+    <tr><td>/gallery</td><td>ニューボーンフォト撮影事例｜藤沢の little seeds photography</td></tr>
+    <tr><td>/plan</td><td>料金プラン｜藤沢のニューボーンフォト出張撮影 | little seeds</td></tr>
+    <tr><td>/voice</td><td>お客様の声・口コミ｜藤沢ニューボーンフォト | little seeds</td></tr>
+    <tr><td>/about</td><td>フォトグラファー紹介｜藤沢のニューボーンフォト | little seeds</td></tr>
+    <tr><td>/faq</td><td>よくあるご質問｜藤沢ニューボーンフォト撮影 | little seeds</td></tr>
+  </tbody>
+</table>
+<p>各ページの h1 と meta description も同様にキーワード重視で書き直す。</p>
+
+<h3 class="action"><span class="stars">⭐⭐</span>施策7: Instagram埋め込み（鮮度シグナル目的）</h3>
+<p><strong>現状</strong>: フォロワー94人、週数回更新<br>
+<strong>根拠</strong>: 94人では被リンク強化は期待薄。ただし <strong>サイト鮮度向上には十分使える</strong></p>
+<ul>
+  <li>gallery ページに Instagramフィード埋め込み</li>
+  <li>投稿時にサイトのギャラリーにも同期掲載（フロー化）</li>
+</ul>
+
+<h2>5. 実行ロードマップ（次の3ヶ月）</h2>
+
+<h3>Month 1（2026-05〜06）: 既存資産の最適化</h3>
+<table>
+  <thead><tr><th>週</th><th>施策</th><th>ファイル</th></tr></thead>
+  <tbody>
+    <tr><td>W1</td><td>新設ページのtitle/h1/description見直し</td><td>gallery/plan/voice/about/faq</td></tr>
+    <tr><td>W1</td><td>GBP口コミ誘導フロー構築（メールテンプレ作成）</td><td>—</td></tr>
+    <tr><td>W2</td><td>トップに実績数値・お客様の声抜粋を追加</td><td>index.html</td></tr>
+    <tr><td>W2</td><td>plan/gallery/voice 末尾にCTAブロック追加</td><td>plan/gallery/voice</td></tr>
+    <tr><td>W3</td><td>contact ページのフォーム/LINE導線UI改善</td><td>contact</td></tr>
+    <tr><td>W4</td><td>モバイル表示の Core Web Vitals 計測・改善</td><td>css/js</td></tr>
+  </tbody>
+</table>
+
+<h3>Month 2（2026-06〜07）: 商圏特化</h3>
+<table>
+  <thead><tr><th>週</th><th>施策</th></tr></thead>
+  <tbody>
+    <tr><td>W5-6</td><td><code>/area/chigasaki/</code> 制作・公開</td></tr>
+    <tr><td>W7-8</td><td><code>/area/kamakura/</code> 制作・公開</td></tr>
+    <tr><td>W6</td><td>BreadcrumbList 構造化データ全ページ追加</td></tr>
+    <tr><td>W8</td><td>Instagram フィード埋め込み実装</td></tr>
+  </tbody>
+</table>
+
+<h3>Month 3（2026-07〜08）: コンテンツSEO</h3>
+<table>
+  <thead><tr><th>週</th><th>施策</th></tr></thead>
+  <tbody>
+    <tr><td>W9-10</td><td><code>/guide/</code> ハブページ + 記事1本目「撮影時期・予約タイミング」</td></tr>
+    <tr><td>W11-12</td><td>記事2-3本目「服装の選び方」「自宅環境準備」</td></tr>
+  </tbody>
+</table>
+
+<h2>6. KPI再設定</h2>
+
+<p>前回プランは野心的すぎたため、実績ベースで現実的に再設定する。</p>
+
+<table>
+  <thead><tr><th>指標</th><th>2026-05現在</th><th>3ヶ月後（08月）</th><th>6ヶ月後（11月）</th></tr></thead>
+  <tbody>
+    <tr><td>「ニューボーンフォト 藤沢」順位</td><td>9.04位</td><td>4位以内</td><td>2-3位</td></tr>
+    <tr><td>「ニューボーンフォト 茅ヶ崎/鎌倉」順位</td><td>圏外</td><td>10位以内</td><td>5位以内</td></tr>
+    <tr><td>表示検索クエリ数（GSC）</td><td>3</td><td>15</td><td>30</td></tr>
+    <tr><td>月間検索クリック数</td><td>~30</td><td>80</td><td>150</td></tr>
+    <tr><td>月間セッション数</td><td>~250</td><td>400</td><td>600</td></tr>
+    <tr><td>CV率（全体）</td><td>0.87%</td><td>2.0%</td><td>3.0%</td></tr>
+    <tr><td>GBP口コミ数</td><td>0（未確認）</td><td>5</td><td>15</td></tr>
+    <tr><td>Instagramフォロワー</td><td>94</td><td>200</td><td>400</td></tr>
+  </tbody>
+</table>
+
+<h2>7. 意思決定が必要なこと</h2>
+
+<ol>
+  <li><strong>横浜・湘南を捨てる判断</strong>: GA4データ的には捨てるべきだが、ブランドの希望もあるはず。湘南は地理的アイデンティティに直結するため判断を要する</li>
+  <li><strong>GBP口コミ誘導のフロー</strong>: 撮影完了メール／LINE運用に組み込む必要あり。文面・タイミングを別途設計が必要</li>
+  <li><strong><code>/guide/</code> ハブの制作可否</strong>: 月1-2本のペースで記事を書く運用負荷を許容できるか。継続性が前提</li>
+  <li><strong>Instagram埋め込みの実装方式</strong>: 公式埋め込みは重い。Curator.io等のサードパーティ or 手動同期画像のいずれを選ぶか</li>
+</ol>
+
+<footer class="report">
+  <strong>出典・参照データ</strong>
+  <ul>
+    <li>GSC: <code>~/Desktop/little-seeds.ayako-suzuki.net-Performance-on-Search-2026-05-12/</code></li>
+    <li>GA4: <code>~/Desktop/トラフィック獲得_*.csv</code>, <code>~/Desktop/ランディング_*.csv</code>, <code>~/Desktop/ページとスクリーン_*.csv</code>, <code>~/Desktop/ユーザー属性の詳細_*.csv</code></li>
+    <li>競合検索: 2026-05-12 時点のGoogle検索結果（日本語）</li>
+    <li>既存資料: <code>draft/260308_seo_strategy_report.md</code>, <code>draft/260315_seo_strategy_plan.md</code>, <code>draft/260320_competitor_analysis.md</code></li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>
