@@ -169,7 +169,7 @@
 <header class="report">
   <h1>little seeds photography SEO戦略評価レポート</h1>
   <div class="meta">
-    <div>作成日: 2026-05-12</div>
+    <div>作成日: 2026-05-12（2026-05-14 追記: 施策8 画像SERP対応を追加）</div>
     <div>対象サイト: <a href="https://little-seeds.ayako-suzuki.net/">https://little-seeds.ayako-suzuki.net/</a></div>
     <div>データソース: Google Search Console（2026-03-06〜05-12, 3ヶ月）／GA4（2026-04-14〜05-11, 4週間）／競合検索結果（2026-05-12）</div>
   </div>
@@ -451,6 +451,28 @@
   <li>投稿時にサイトのギャラリーにも同期掲載（フロー化）</li>
 </ul>
 
+<h3 class="action"><span class="stars">⭐⭐⭐⭐</span>施策8: 検索結果のサムネ画像表示（マルチイメージSERP）対応</h3>
+<p><strong>現状</strong>: 競合 OurPhoto は「神奈川県藤沢市でニューボーンフォト」の検索結果に <strong>3枚の作品サムネが並ぶリッチリザルト</strong>を獲得。little seeds はサムネ表示なし　<strong>目標</strong>: 主要クエリ（藤沢／茅ヶ崎／鎌倉×ニューボーンフォト）で作品サムネ付き表示を獲得し、視覚優位のサービスとして CTR をさらに伸ばす<br>
+<strong>根拠</strong>: 写真サービスは「画像がSERPに出るか」でクリック率が大きく変わる。CTRが既に 17-18% と高い土台があるため、サムネ表示が加われば視認性で競合を上回れる。OurPhoto はタイトルに「神奈川県藤沢市でニューボーンフォト」と地域＋サービスを明示し、画像構造化と組み合わせて獲得している</p>
+<ul>
+  <li><strong>画像サイトマップの追加</strong>: <code>sitemap.xml</code> に <code>image:image</code> 拡張で、各ページが保持する画像URLとキャプションを明示。Googleに「このページにこの画像がある」と直接通知する
+    <ul>
+      <li>例: <code>&lt;url&gt;&lt;loc&gt;.../gallery/&lt;/loc&gt;&lt;image:image&gt;&lt;image:loc&gt;.../newborn-01.webp&lt;/image:loc&gt;&lt;image:caption&gt;藤沢の新生児フォト おくるみポーズ&lt;/image:caption&gt;&lt;/image:image&gt;&lt;/url&gt;</code></li>
+    </ul>
+  </li>
+  <li><strong>構造化データ（JSON-LD）の整備</strong>
+    <ul>
+      <li>トップ: <code>LocalBusiness</code> ＋ <code>image</code>（代表画像3-5枚を <code>image</code> 配列で指定）</li>
+      <li>/gallery: <code>ImageGallery</code> もしくは個別 <code>ImageObject</code> の集合</li>
+      <li>各画像に <code>contentUrl</code> / <code>caption</code> / <code>creator</code> / <code>datePublished</code> を付与</li>
+    </ul>
+  </li>
+  <li><strong>alt属性の最適化</strong>: 全画像のaltを「藤沢 ニューボーンフォト おくるみポーズ」のように <strong>地名＋サービス語＋シーン</strong> の自然文に書き直す（現状のロゴ/装飾用以外は全件対象）</li>
+  <li><strong>figure / figcaption の活用</strong>: 主要作品画像を <code>&lt;figure&gt;</code> ＋ <code>&lt;figcaption&gt;</code> で構造化し、画像と説明文を意味的に結合する</li>
+  <li><strong>og:image の個別化</strong>: 全ページ共通のロゴ画像をやめ、各ページの内容に応じた代表画像（gallery なら作品、plan なら撮影シーン）に差し替え</li>
+  <li><strong>title／h1への地域＋サービス語の埋め込み</strong>: 施策6のタイトル見直しと連動。OurPhotoが「神奈川県藤沢市でニューボーンフォトの出張撮影」とtitleに明示している点が画像SERP獲得の前提条件</li>
+</ul>
+
 <h2>5. 実行ロードマップ（次の3ヶ月）</h2>
 
 <h3>Month 1（2026-05〜06）: 既存資産の最適化</h3>
@@ -462,6 +484,8 @@
     <tr><td>W2</td><td>トップに実績数値・お客様の声抜粋を追加</td><td>index.html</td></tr>
     <tr><td>W2</td><td>plan/gallery/voice 末尾にCTAブロック追加</td><td>plan/gallery/voice</td></tr>
     <tr><td>W3</td><td>contact ページのフォーム/LINE導線UI改善</td><td>contact</td></tr>
+    <tr><td>W3</td><td>画像サイトマップ追加＋全画像のalt属性最適化（施策8）</td><td>sitemap.xml / 全HTML</td></tr>
+    <tr><td>W4</td><td>ImageObject / ImageGallery / LocalBusiness の JSON-LD実装＋og:image個別化（施策8）</td><td>index.html / gallery / 各ページ</td></tr>
     <tr><td>W4</td><td>モバイル表示の Core Web Vitals 計測・改善</td><td>css/js</td></tr>
   </tbody>
 </table>
