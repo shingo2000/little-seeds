@@ -1,44 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://little-seeds.ayako-suzuki.net/</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/hero_1.webp</image:loc>
+      <image:caption>藤沢のニューボーンフォト出張撮影 little seeds photography 作品1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/hero_2.webp</image:loc>
+      <image:caption>藤沢のニューボーンフォト出張撮影 little seeds photography 作品2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/hero_3.webp</image:loc>
+      <image:caption>藤沢のニューボーンフォト出張撮影 little seeds photography 作品3</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/hero_4.webp</image:loc>
+      <image:caption>藤沢のニューボーンフォト出張撮影 little seeds photography 作品4</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/hero_5.webp</image:loc>
+      <image:caption>藤沢のニューボーンフォト出張撮影 little seeds photography 作品5</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://little-seeds.ayako-suzuki.net/about/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/concept.webp</image:loc>
+      <image:caption>藤沢のニューボーンフォト little seeds photography コンセプトイメージ</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://little-seeds.ayako-suzuki.net/gallery/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_1.webp</image:loc>
+      <image:caption>ナチュラルなニューボーンフォト 白いおくるみで微笑む新生児</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_2.webp</image:loc>
+      <image:caption>シンプルなニューボーンフォト バスケットで眠る赤ちゃん</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_3.webp</image:loc>
+      <image:caption>自然体のニューボーンフォト うつ伏せで眠る新生児</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_4.webp</image:loc>
+      <image:caption>ナチュラルな雰囲気のニューボーンフォト 体を丸めて眠る赤ちゃん</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_6.webp</image:loc>
+      <image:caption>自然体のニューボーンフォト ご両親の手に包まれる新生児</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_7.webp</image:loc>
+      <image:caption>ナチュラルなニューボーンフォト 花のヘッドバンドで眠る赤ちゃん</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_8.webp</image:loc>
+      <image:caption>シンプルなニューボーンフォト レースのヘッドバンドで微笑む新生児</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_9.webp</image:loc>
+      <image:caption>ナチュラル＆シンプルなニューボーンフォト 白いニットロンパースで眠る赤ちゃん</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_10.webp</image:loc>
+      <image:caption>自然体のニューボーンフォト ふわふわラグで微笑む新生児</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_11.webp</image:loc>
+      <image:caption>ナチュラルなニューボーンフォト ラベンダーのラップに包まれる赤ちゃん</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_12.webp</image:loc>
+      <image:caption>シンプルなニューボーンフォト 花弁に囲まれて眠る新生児</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_13.webp</image:loc>
+      <image:caption>自然体のニューボーンフォト ベージュのおくるみで眠る赤ちゃん</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_14.webp</image:loc>
+      <image:caption>ナチュラルなニューボーンフォト デイジーに囲まれた白ロンパースの新生児</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_15.webp</image:loc>
+      <image:caption>シンプルなニューボーンフォト 白いブランケットでうつ伏せの赤ちゃん</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_16.webp</image:loc>
+      <image:caption>自然体のニューボーンフォト 黒背景でおすわりポーズの新生児</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_17.webp</image:loc>
+      <image:caption>兄弟で撮るナチュラルなニューボーンフォト 笑顔のお姉ちゃんと眠る赤ちゃん</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_18.webp</image:loc>
+      <image:caption>家族で撮るナチュラルなニューボーンフォト ご両親に抱かれる新生児</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_19.webp</image:loc>
+      <image:caption>家族写真を自然体で撮るニューボーンフォト 笑顔の3人ショット</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_20.webp</image:loc>
+      <image:caption>ママと撮るシンプルなニューボーンフォト おくるみの新生児を抱いて</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_21.webp</image:loc>
+      <image:caption>家族で撮るナチュラルなニューボーンフォト 窓辺の光に包まれる3人</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://little-seeds.ayako-suzuki.net/plan/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/plan_basic.webp</image:loc>
+      <image:caption>藤沢のニューボーンフォト出張撮影 ベーシックプラン撮影イメージ</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/plan_mini.webp</image:loc>
+      <image:caption>藤沢のニューボーンフォト出張撮影 ミニプラン撮影イメージ</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://little-seeds.ayako-suzuki.net/faq/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://little-seeds.ayako-suzuki.net/voice/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://little-seeds.ayako-suzuki.net/contact/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
