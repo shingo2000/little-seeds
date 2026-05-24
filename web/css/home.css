@@ -222,6 +222,14 @@
     align-self: stretch;
 }
 
+.voice-preview__author {
+    align-self: stretch;
+    font-size: var(--font-size-s);
+    color: var(--color-text-subtle);
+    letter-spacing: 0.13em;
+    line-height: 1.4;
+}
+
 /* ========================================
    Home - FAQ Preview
    ======================================== */
