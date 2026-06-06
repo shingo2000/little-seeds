@@ -264,11 +264,19 @@
     text-align: right;
 }
 
-.area__note {
+.area__notes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
     font-size: var(--font-size-s);
     color: var(--color-text-subtle);
     letter-spacing: 0.13em;
     line-height: 1.4;
+}
+
+.area__notes li {
+    padding-left: 1em;
+    text-indent: -1em;
 }
 
 /* ========================================
