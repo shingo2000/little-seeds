@@ -291,11 +291,14 @@
 
     .voice-preview__list {
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
+        max-width: 704px;
+        margin: 0 auto;
     }
 
     .voice-preview__card {
-        flex: 1;
+        flex: 1 1 calc((100% - var(--space-3)) / 2);
         max-width: 340px;
     }
 }
