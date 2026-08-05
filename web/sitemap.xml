@@ -39,9 +39,25 @@
   </url>
   <url>
     <loc>https://little-seeds.ayako-suzuki.net/gallery/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_22.webp</image:loc>
+      <image:caption>ナチュラルなニューボーンフォト 紫陽花に囲まれ白いおくるみで眠る新生児</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_23.webp</image:loc>
+      <image:caption>シンプルなニューボーンフォト おくるみから覗く赤ちゃんの小さな足</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_24.webp</image:loc>
+      <image:caption>自然体のニューボーンフォト カラーの花を抱いて丸まる新生児</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_25.webp</image:loc>
+      <image:caption>ナチュラル＆シンプルなニューボーンフォト 白い布に包まれてうつ伏せで眠る赤ちゃん</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://little-seeds.ayako-suzuki.net/assets/images/gallery/gallery_1.webp</image:loc>
       <image:caption>ナチュラルなニューボーンフォト 白いおくるみで微笑む新生児</image:caption>
