@@ -44,37 +44,10 @@
     aspect-ratio: 4 / 2.67;
 }
 
-.plan-card__badge {
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-    background-color: var(--color-accent);
-    color: white;
-    font-size: var(--font-size-s);
-    letter-spacing: 0.13em;
-    padding: 0 var(--space-1);
-    height: 24px;
-    line-height: 24px;
-    border-radius: 8px;
-}
-
 .plan-card__price {
     text-align: center;
     margin: var(--space-2) 0;
     line-height: 1.4;
-}
-
-.plan-card__price-original {
-    display: block;
-    font-size: var(--font-size-s);
-    color: var(--color-text-subtle);
-    letter-spacing: 0.13em;
-    text-decoration: line-through;
-}
-
-.plan-card__price--discount .plan-card__price-amount,
-.plan-card__price--discount .plan-card__price-unit {
-    color: var(--color-accent);
 }
 
 .plan-card__price-amount {
@@ -82,12 +55,14 @@
     font-size: var(--font-size-l);
     font-weight: 400;
     letter-spacing: 0.08em;
+    color: var(--color-accent);
 }
 
 .plan-card__price-unit {
     font-size: var(--font-size-s);
     letter-spacing: 0.13em;
     margin-left: var(--space-0_5);
+    color: var(--color-accent);
 }
 
 .plan-card__price-tax {
